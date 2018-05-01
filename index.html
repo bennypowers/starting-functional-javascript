@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>ECMAScript Update</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <meta name="theme-color" content="#FF2A69">
+    <meta property="og:title" content="ECMAScript Update" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="description" content="A Short Presentation on the new JavaScript" />
+    <meta property="og:description" content="A Short Presentation on the new JavaScript" />
+    <meta property="og:site_name" content="ECMAScript Update" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700">
+
+    <script src="https://unpkg.com/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+
+    <style>
+      :root {
+        --primary: #FF2A69;
+      }
+
+      slidem-deck[loading] {
+        display: none;
+      }
+
+      img[center] {
+        margin: 0 auto;
+      }
+    </style>
+
+  </head>
+  <body>
+    <script type="module" src="slide-elements.js"></script>
+    <script nomodule src="slide-elements.nomodule.js"></script>
+
+    <slidem-deck transition="slide-in slide-out" font="Open Sans Condensed" loading>
+      <slidem-slide center slide-in background="--primary">
+        <h1 uppercase fit line-height="0.8" color="White">ES Update</h1>
+
+        <p line-height="1.8">&nbsp;</p>
+
+        <p uppercase fit color="black">A Wee Catch Up On the Language</p>
+        <p uppercase fit color="white">you Thought you Knew</p>
+
+        <p line-height="1.8">&nbsp;</p>
+
+        <p fitcenter font-size="78px" color="white">Let's Begin!</p>
+      </slidem-slide>
+
+      <slidem-slide center slide-in background="black">
+        <p uppercase color="--primary">Block Scoped Variables</p>
+      </slidem-slide>
+
+      <slidem-slide center center-content fade-in slide-out darken-background=".75">
+        <img center src="/images/iifes.png">
+        <img center src="./images/block-scoped.png">
+      </slidem-slide>
+
+      <slidem-slide center slide-in slide-out background="black">
+        <p uppercase color="--primary"><code>let</code> and <code>const</code></p>
+        <img center reveal src="/images/let-const.png" alt="let and const">
+      </slidem-slide>
+
+      <slidem-slide fade-in background="--primary">
+        <h2 uppercase color="black">Arrow Functions</h2>
+        <img center src="/images/arrow-functions.svg" alt="arrow-functions">
+      </slidem-slide>
+
+      <slidem-slide fade-in background="--primary">
+        <h2 uppercase color="black">Destructuring Assignment - Arrays</h2>
+        <img center reveal src="/images/destruct-array-1.svg" alt="array property access">
+        <img center reveal src="/images/destruct-array-2.png" alt="array destructuring">
+      </slidem-slide>
+
+      <slidem-slide fade-in background="--primary">
+        <h2 uppercase color="black">Destructuring Assignment - Objects</h2>
+        <img center reveal src="/images/destruct-object-1.svg" alt="object property access">
+        <img center reveal src="/images/destruct-object-2.svg" alt="object destructuring">
+      </slidem-slide>
+
+      <slidem-slide fade-in background="--primary">
+        <h2 uppercase color="black">Rest and Spread</h2>
+        <img center src="/images/rest-spread.svg" alt="rest/spread">
+      </slidem-slide>
+
+      <slidem-slide fade-in background="--primary">
+        <h2 uppercase color="black">Template Literals</h2>
+        <img center src="/images/template-literals.svg" alt="template-literals">
+      </slidem-slide>
+
+      <slidem-slide fade-in background="--primary">
+        <h2 uppercase color="black">Default Parameters</h2>
+        <img center src="/images/default-parameters.svg" alt="default-parameters">
+      </slidem-slide>
+
+      <slidem-slide fade-in background="--primary">
+        <h2 uppercase color="black">Concise Object Syntax</h2>
+        <img center src="/images/concise-object.svg" alt="concise-object">
+      </slidem-slide>
+
+      <slidem-slide fade-in background="--primary">
+        <h2 uppercase color="black">Computed Property Keys</h2>
+        <img center src="/images/computed-property-keys.svg" alt="computed-property-keys">
+      </slidem-slide>
+
+      <slidem-slide fade-in background="--primary">
+        <h2 uppercase color="black"><code>class</code> Keyword</h2>
+        <img center src="/images/class-keyword.svg" alt="class-keyword">
+      </slidem-slide>
+
+      <slidem-slide fade-in background="--primary">
+        <h2 uppercase color="black">Promises</h2>
+        <img center src="/images/promises.svg" alt="promises">
+      </slidem-slide>
+
+      <slidem-slide fade-in background="--primary">
+        <h2 uppercase color="black"><code>async</code> Functions</h2>
+        <img center src="/images/async-functions.svg" alt="async-functions">
+      </slidem-slide>
+
+      <slidem-polymersummit-slide>
+        <h2 slot="title">Custom Styling</h2>
+        <p reveal slot="subtitle">Design with HTML and CSS</p>
+        <img slot="logo" src="/images/polymer.png">
+        <img slot="avatar" src="/images/avatar.jpg">
+        <p slot="event">Polymer Summit Copenhagen 2017</p>
+        <p slot="speaker">Goffert van Gool</p>
+        <a slot="email" href="mailto:ruphin@ruphin.net">ruphin@ruphin.net</a>
+        <a slot="twitter" href="https://twitter.com/ruphin_">@ruphin_</a>
+      </slidem-polymersummit-slide>
+
+      <slidem-slide center slide-in darken-background=".8" background="/images/presenter.jpg">
+        <h2 uppercase font-size="158px" line-height="1.8" color="white">Other features include</h2>
+        <p uppercase font-size="118px" line-height="1.3" color="white">- Presenter Mode (press p)</p>
+        <p uppercase font-size="118px" line-height="1.3" color="white">- Fullscreen video</p>
+        <p uppercase font-size="118px" line-height="1.3" color="white">- Inline text styling</p>
+      </slidem-slide>
+      <slidem-video-slide center fade-in slide-out fullscreen muted video="/videos/presenter.mp4"></slidem-video-slide>
+
+      <slidem-slide center background="white">
+        <p fit color="--primary" uppercase>Install
+          <span color="black">
+            <a href="https://www.npmjs.com/package/slidem">With NPM</a>
+          </span>
+        </p>
+        <p fit color="--primary" uppercase>Check
+          <span color="black">
+            <a href="https://github.com/ruphin/slidem">The source</a>
+          </span>
+        </p>
+        <p fit color="--primary" uppercase>Read
+          <span color="black">
+            <a href="/docs">The Docs</a>
+          </span>
+        </p>
+        <p style="text-align: right;">(soon)</p>
+      </slidem-slide>
+    </slidem-deck>
+  </body>
+</html>
+<!DOCTYPE html>
