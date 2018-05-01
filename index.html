@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700">
 
     <script src="https://unpkg.com/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
-
+    <script src="https://cdn.rawgit.com/zerodevx/zero-md/v1.0.0/build/zero-md.min.js"></script>
     <style>
       :root {
         --primary: #FF2A69;
@@ -27,15 +27,44 @@
       img[center] {
         margin: 0 auto;
       }
+
+      zero-md {
+        background: #1d1f21;
+        padding: 0 1em;
+        font-size: 32px;
+        border-radius: 0.5em;
+        color: #c5c8c6;
+        box-shadow: 0 0 10px black;
+      }
+
+      [bleed] {
+        min-height: calc(100% - 66px)
+      }
+
+      [floating] {
+        position: absolute;
+        right: 0;
+        left: 0;
+        /* top: 96px; */
+      }
+
+      [active] {
+        z-index: 1;
+      }
+
+      [explanation] {
+        margin: 2em;
+      }
     </style>
 
   </head>
   <body>
+    <prism-highlighter></prism-highlighter>
     <script type="module" src="slide-elements.js"></script>
     <script nomodule src="slide-elements.nomodule.js"></script>
 
     <slidem-deck transition="slide-in slide-out" font="Open Sans Condensed" loading>
-      <slidem-slide center slide-in background="--primary">
+      <slidem-slide slide-in center background="--primary">
         <h1 uppercase fit line-height="0.8" color="White">ES Update</h1>
 
         <p line-height="1.8">&nbsp;</p>
@@ -48,95 +77,112 @@
         <p fitcenter font-size="78px" color="white">Let's Begin!</p>
       </slidem-slide>
 
-      <slidem-slide center slide-in background="black">
-        <p uppercase color="--primary">Block Scoped Variables</p>
+      <slidem-slide slide-in background="black">
+        <h2 uppercase color="--primary">Block Scoped Variables</h2>
+        <div floating explanation>
+          <p color="white">ES Joins the ranks of other languages with block scoping.</p>
+        </div>
+        <zero-md reveal bleed floating css-urls='["prism-atom-dark.css"]' src="markdown/block-scope.md"></zero-md>
       </slidem-slide>
 
-      <slidem-slide center center-content fade-in slide-out darken-background=".75">
-        <img center src="/images/iifes.png">
-        <img center src="./images/block-scoped.png">
+      <slidem-slide slide-in background="black">
+        <h2 uppercase color="--primary"><code>let</code> and <code>const</code></h2>
+        <div floating explanation>
+          <p color="white">New keywords for declaring block-scoped mutable and immutable variables.</p>
+        </div>
+        <zero-md reveal bleed floating css-urls='["prism-atom-dark.css"]' src="markdown/let-const.md"></zero-md>
       </slidem-slide>
 
-      <slidem-slide center slide-in slide-out background="black">
-        <p uppercase color="--primary"><code>let</code> and <code>const</code></p>
-        <img center reveal src="/images/let-const.png" alt="let and const">
-      </slidem-slide>
-
-      <slidem-slide fade-in background="--primary">
+      <slidem-slide slide-in background="--primary">
         <h2 uppercase color="black">Arrow Functions</h2>
-        <img center src="/images/arrow-functions.svg" alt="arrow-functions">
+        <div floating explanation>
+          <p color="white">A concise way to define functions with expressions</p>
+        </div>
+        <zero-md reveal bleed floating css-urls='["prism-atom-dark.css"]' src="markdown/arrow-functions-1.md"></zero-md>
+        <zero-md reveal bleed floating css-urls='["prism-atom-dark.css"]' src="markdown/arrow-functions-2.md"></zero-md>
       </slidem-slide>
 
-      <slidem-slide fade-in background="--primary">
-        <h2 uppercase color="black">Destructuring Assignment - Arrays</h2>
-        <img center reveal src="/images/destruct-array-1.svg" alt="array property access">
-        <img center reveal src="/images/destruct-array-2.png" alt="array destructuring">
+      <slidem-slide slide-in background="--primary">
+        <h2 uppercase color="black">Arrow Functions - <code>this</code> Binding</h2>
+        <div floating explanation>
+          <p color="white"><code>this</code> is a notoriously cryptic keyword in JavaScript.</p>
+          <p color="white">Arrow functions provide a more predictable behaviour for <code>this</code>.</p>
+        </div>
+        <zero-md reveal fit bleed css-urls='["prism-atom-dark.css"]' src="markdown/arrow-functions-this.md"></zero-md>
       </slidem-slide>
 
-      <slidem-slide fade-in background="--primary">
-        <h2 uppercase color="black">Destructuring Assignment - Objects</h2>
-        <img center reveal src="/images/destruct-object-1.svg" alt="object property access">
-        <img center reveal src="/images/destruct-object-2.svg" alt="object destructuring">
+      <slidem-slide slide-in background="black">
+        <h2 uppercase color="--primary">Destructuring Assignment</h2>
+        <div floating explanation>
+          <p color="white" line-height="1.5">Destructuring let's us describe the structure of data while assigning names to its members.</p>
+          <p color="white" line-height="1.5">It can help reduce surface area for typo bugs and encourages immutable flows, and reduce boilerplate when defining functions.</p>
+        </div>
       </slidem-slide>
 
-      <slidem-slide fade-in background="--primary">
+      <slidem-slide fade-in background="black">
+        <h2 uppercase color="--primary">Destructuring Assignment - Arrays</h2>
+        <zero-md fit bleed css-urls='["prism-atom-dark.css"]' src="markdown/destructuring-array.md"></zero-md>
+      </slidem-slide>
+
+      <slidem-slide fade-in background="black">
+        <h2 uppercase color="--primary">Destructuring Assignment - Objects</h2>
+        <zero-md fit bleed css-urls='["prism-atom-dark.css"]' src="markdown/destructuring-object.md"></zero-md>
+      </slidem-slide>
+
+      <slidem-slide fade-in background="black">
+        <h2 uppercase color="--primary">Destructuring Assignment - Aliasing</h2>
+        <zero-md fit bleed css-urls='["prism-atom-dark.css"]' src="markdown/destructuring-alias.md"></zero-md>
+      </slidem-slide>
+
+      <slidem-slide fade-in background="black">
+        <h2 uppercase color="--primary">Destructuring Assignment - Function Params</h2>
+        <zero-md fit bleed css-urls='["prism-atom-dark.css"]' src="markdown/destructuring-params.md"></zero-md>
+      </slidem-slide>
+
+      <slidem-slide slide-in background="--primary">
         <h2 uppercase color="black">Rest and Spread</h2>
-        <img center src="/images/rest-spread.svg" alt="rest/spread">
+        <zero-md fit bleed css-urls='["prism-atom-dark.css"]' src="markdown/rest-spread.md"></zero-md>
       </slidem-slide>
 
       <slidem-slide fade-in background="--primary">
-        <h2 uppercase color="black">Template Literals</h2>
-        <img center src="/images/template-literals.svg" alt="template-literals">
+        <h2 uppercase color="black">Rest and Spread - Tricks</h2>
+        <zero-md fit bleed css-urls='["prism-atom-dark.css"]' src="markdown/rest-spread-tricks.md"></zero-md>
       </slidem-slide>
 
       <slidem-slide fade-in background="--primary">
         <h2 uppercase color="black">Default Parameters</h2>
-        <img center src="/images/default-parameters.svg" alt="default-parameters">
+        <zero-md fit bleed css-urls='["prism-atom-dark.css"]' src="markdown/default-parameters.md"></zero-md>
       </slidem-slide>
 
       <slidem-slide fade-in background="--primary">
         <h2 uppercase color="black">Concise Object Syntax</h2>
-        <img center src="/images/concise-object.svg" alt="concise-object">
+        <zero-md fit bleed css-urls='["prism-atom-dark.css"]' src="markdown/concise-object.md">
+      </slidem-slide>
+
+      <slidem-slide fade-in background="--primary">
+        <h2 uppercase color="black">Template Literals</h2>
+        <zero-md fit bleed css-urls='["prism-atom-dark.css"]' src="markdown/template-literals.md"></zero-md>
       </slidem-slide>
 
       <slidem-slide fade-in background="--primary">
         <h2 uppercase color="black">Computed Property Keys</h2>
-        <img center src="/images/computed-property-keys.svg" alt="computed-property-keys">
+        <zero-md fit bleed css-urls='["prism-atom-dark.css"]' src="markdown/computed-property-keys.md">
       </slidem-slide>
 
       <slidem-slide fade-in background="--primary">
         <h2 uppercase color="black"><code>class</code> Keyword</h2>
-        <img center src="/images/class-keyword.svg" alt="class-keyword">
+        <zero-md fit bleed css-urls='["prism-atom-dark.css"]' src="markdown/class-keyword.md">
       </slidem-slide>
 
       <slidem-slide fade-in background="--primary">
         <h2 uppercase color="black">Promises</h2>
-        <img center src="/images/promises.svg" alt="promises">
+        <zero-md fit bleed css-urls='["prism-atom-dark.css"]' src="markdown/promises.md">
       </slidem-slide>
 
       <slidem-slide fade-in background="--primary">
         <h2 uppercase color="black"><code>async</code> Functions</h2>
-        <img center src="/images/async-functions.svg" alt="async-functions">
+        <zero-md fit bleed css-urls='["prism-atom-dark.css"]' src="markdown/async-functions.md">
       </slidem-slide>
-
-      <slidem-polymersummit-slide>
-        <h2 slot="title">Custom Styling</h2>
-        <p reveal slot="subtitle">Design with HTML and CSS</p>
-        <img slot="logo" src="/images/polymer.png">
-        <img slot="avatar" src="/images/avatar.jpg">
-        <p slot="event">Polymer Summit Copenhagen 2017</p>
-        <p slot="speaker">Goffert van Gool</p>
-        <a slot="email" href="mailto:ruphin@ruphin.net">ruphin@ruphin.net</a>
-        <a slot="twitter" href="https://twitter.com/ruphin_">@ruphin_</a>
-      </slidem-polymersummit-slide>
-
-      <slidem-slide center slide-in darken-background=".8" background="/images/presenter.jpg">
-        <h2 uppercase font-size="158px" line-height="1.8" color="white">Other features include</h2>
-        <p uppercase font-size="118px" line-height="1.3" color="white">- Presenter Mode (press p)</p>
-        <p uppercase font-size="118px" line-height="1.3" color="white">- Fullscreen video</p>
-        <p uppercase font-size="118px" line-height="1.3" color="white">- Inline text styling</p>
-      </slidem-slide>
-      <slidem-video-slide center fade-in slide-out fullscreen muted video="/videos/presenter.mp4"></slidem-video-slide>
 
       <slidem-slide center background="white">
         <p fit color="--primary" uppercase>Install
@@ -157,6 +203,6 @@
         <p style="text-align: right;">(soon)</p>
       </slidem-slide>
     </slidem-deck>
+
   </body>
 </html>
-<!DOCTYPE html>

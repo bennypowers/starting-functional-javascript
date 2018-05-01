@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.html",
   "dependencies": {
+    "@polymer/marked-element": "^3.0.0-pre.12",
+    "@polymer/prism-element": "^3.0.0-pre.12",
     "slidem": "^1.2.0"
   },
   "devDependencies": {},
