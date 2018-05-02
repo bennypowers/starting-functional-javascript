@@ -1,4 +1,4 @@
-## Arrow Functions
+## ES2015 Arrow Functions
 ```js
 const identity = x => x;                            // single param
 

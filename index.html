@@ -18,6 +18,8 @@
     <style>
       :root {
         --primary: #FF2A69;
+        --secondary: #EDFF40;
+        --bottom-offset: 106px;
       }
 
       slidem-deck[loading] {
@@ -42,11 +44,11 @@
         font-size: 32px;
         border-radius: 0.5em;
         color: #c5c8c6;
-        box-shadow: 0 0 10px black;
+        box-shadow: 10px 10px 100px black;
       }
 
       [bleed] {
-        min-height: calc(100% - 66px)
+        min-height: calc(100% - var(--bottom-offset))
       }
 
       [floating] {
@@ -60,14 +62,21 @@
         z-index: 1;
       }
 
+      zero-md:not(:first-child):not([bleed]) {
+        margin-top: 1em;
+      }
+
       [explanation] {
         margin: 2em;
+      }
+
+      .avatar {
+        max-width: 36px;
       }
     </style>
 
   </head>
   <body>
-    <prism-highlighter></prism-highlighter>
     <script type="module" src="slide-elements.js"></script>
     <script nomodule src="slide-elements.nomodule.js"></script>
 
@@ -85,20 +94,20 @@
         <p fitcenter font-size="78px" color="white">Let's Begin!</p>
       </slidem-slide>
 
-      <slidem-slide slide-in background="black">
+      <slidem-slide id="block-scoped" slide-in background="--secondary">
         <h2 uppercase color="--primary">Block Scoped Variables</h2>
         <div floating explanation>
-          <p color="white">ES Joins the ranks of other languages with block scoping.</p>
+          <p color="black">ES Joins the ranks of other languages with block scoping.</p>
         </div>
-        <zero-md reveal bleed floating css-urls='["prism-atom-dark.css"]' src="markdown/block-scope.md"></zero-md>
+        <zero-md reveal floating css-urls='["prism-atom-dark.css"]' src="markdown/block-scope.md"></zero-md>
       </slidem-slide>
 
-      <slidem-slide slide-in background="black">
+      <slidem-slide slide-in background="--secondary">
         <h2 uppercase color="--primary"><code>let</code> and <code>const</code></h2>
         <div floating explanation>
-          <p color="white">New keywords for declaring block-scoped mutable and immutable variables.</p>
+          <p color="black">New keywords for declaring block-scoped mutable and immutable variables.</p>
         </div>
-        <zero-md reveal bleed floating css-urls='["prism-atom-dark.css"]' src="markdown/let-const.md"></zero-md>
+        <zero-md reveal floating css-urls='["prism-atom-dark.css"]' src="markdown/let-const.md"></zero-md>
       </slidem-slide>
 
       <slidem-slide slide-in background="--primary">
@@ -106,8 +115,8 @@
         <div floating explanation>
           <p color="white">A concise way to define functions with expressions</p>
         </div>
-        <zero-md reveal bleed floating css-urls='["prism-atom-dark.css"]' src="markdown/arrow-functions-1.md"></zero-md>
-        <zero-md reveal bleed floating css-urls='["prism-atom-dark.css"]' src="markdown/arrow-functions-2.md"></zero-md>
+        <zero-md reveal floating css-urls='["prism-atom-dark.css"]' src="markdown/arrow-functions-1.md"></zero-md>
+        <zero-md reveal floating css-urls='["prism-atom-dark.css"]' src="markdown/arrow-functions-2.md"></zero-md>
       </slidem-slide>
 
       <slidem-slide slide-in background="--primary">
@@ -116,103 +125,114 @@
           <p color="white"><code>this</code> is a notoriously cryptic keyword in JavaScript.</p>
           <p color="white">Arrow functions provide a more predictable behaviour for <code>this</code>.</p>
         </div>
-        <zero-md reveal fit bleed css-urls='["prism-atom-dark.css"]' src="markdown/arrow-functions-this.md"></zero-md>
+        <zero-md reveal fit css-urls='["prism-atom-dark.css"]' src="markdown/arrow-functions-this.md"></zero-md>
       </slidem-slide>
 
-      <slidem-slide slide-in background="black">
+      <slidem-slide slide-in background="--secondary">
         <h2 uppercase color="--primary">Destructuring Assignment</h2>
         <div floating explanation>
-          <p color="white" line-height="1.5">Destructuring let's us describe the structure of data while assigning names to its members.</p>
-          <p color="white" line-height="1.5">It can help reduce surface area for typo bugs and encourages immutable flows, and reduce boilerplate when defining functions.</p>
+          <p color="black" line-height="1.5">Destructuring let's us describe the structure of data while assigning names to its members.</p>
+          <p color="black" line-height="1.5">It can help reduce surface area for typo bugs and encourages immutable flows, and reduce boilerplate when defining functions.</p>
         </div>
       </slidem-slide>
 
-      <slidem-slide fade-in background="black">
+      <slidem-slide fade-in background="--secondary">
         <h2 uppercase color="--primary">Destructuring Assignment - Arrays</h2>
-        <zero-md fit bleed css-urls='["prism-atom-dark.css"]' src="markdown/destructuring-array.md"></zero-md>
+        <zero-md fit css-urls='["prism-atom-dark.css"]' src="markdown/destructuring-array.md"></zero-md>
       </slidem-slide>
 
-      <slidem-slide fade-in background="black">
+      <slidem-slide fade-in background="--secondary">
         <h2 uppercase color="--primary">Destructuring Assignment - Objects</h2>
-        <zero-md fit bleed css-urls='["prism-atom-dark.css"]' src="markdown/destructuring-object.md"></zero-md>
+        <zero-md fit css-urls='["prism-atom-dark.css"]' src="markdown/destructuring-object.md"></zero-md>
       </slidem-slide>
 
-      <slidem-slide fade-in background="black">
+      <slidem-slide fade-in background="--secondary">
         <h2 uppercase color="--primary">Destructuring Assignment - Aliasing</h2>
-        <zero-md fit bleed css-urls='["prism-atom-dark.css"]' src="markdown/destructuring-alias.md"></zero-md>
+        <zero-md fit css-urls='["prism-atom-dark.css"]' src="markdown/destructuring-alias.md"></zero-md>
       </slidem-slide>
 
-      <slidem-slide fade-in background="black">
+      <slidem-slide fade-in background="--secondary">
         <h2 uppercase color="--primary">Destructuring Assignment - Function Params</h2>
-        <zero-md fit bleed css-urls='["prism-atom-dark.css"]' src="markdown/destructuring-params.md"></zero-md>
+        <zero-md fit css-urls='["prism-atom-dark.css"]' src="markdown/destructuring-params.md"></zero-md>
       </slidem-slide>
 
       <slidem-slide slide-in background="--primary">
         <h2 uppercase color="black">Rest and Spread</h2>
-        <zero-md fit bleed css-urls='["prism-atom-dark.css"]' src="markdown/rest-spread.md"></zero-md>
+        <zero-md fit css-urls='["prism-atom-dark.css"]' src="markdown/rest-spread.md"></zero-md>
       </slidem-slide>
 
       <slidem-slide fade-in background="--primary">
         <h2 uppercase color="black">Rest and Spread - Tricks</h2>
-        <zero-md fit bleed css-urls='["prism-atom-dark.css"]' src="markdown/rest-spread-tricks.md"></zero-md>
+        <zero-md fit css-urls='["prism-atom-dark.css"]' src="markdown/rest-spread-tricks.md"></zero-md>
       </slidem-slide>
 
-      <slidem-slide fade-in background="--primary">
+      <slidem-slide slide-in background="--primary">
         <h2 uppercase color="black">Default Parameters</h2>
-        <div floating explanation>
-          <p color="white" line-height="1.5">The Problem: Defining Meaningful Defaults for Optional Params</p>
-          <zero-md fit bleed css-urls='["prism-atom-dark.css"]' src="markdown/default-parameters-problem.md"></zero-md>
-        </div>
-        <zero-md reveal fit bleed css-urls='["prism-atom-dark.css"]' src="markdown/default-parameters.md"></zero-md>
+        <zero-md floating fit css-urls='["prism-atom-dark.css"]' src="markdown/default-parameters-problem.md"></zero-md>
+        <zero-md reveal fit css-urls='["prism-atom-dark.css"]' src="markdown/default-parameters.md"></zero-md>
       </slidem-slide>
 
-      <slidem-slide fade-in background="--primary">
+      <slidem-slide slide-in background="--primary">
         <h2 uppercase color="black">Concise Object Syntax</h2>
-        <zero-md fit bleed css-urls='["prism-atom-dark.css"]' src="markdown/concise-object.md">
+        <div floating explanation>
+          <p color="white">When initializing objects, if you have a variable with the same name as one of your keys, you can skip the assignment.</p>
+        </div>
+        <zero-md floating reveal css-urls='["prism-atom-dark.css"]' src="markdown/concise-object.md"></zero-md>
+        <zero-md floating reveal bleed fit css-urls='["prism-atom-dark.css"]' src="markdown/concise-object-params.md"></zero-md>
       </slidem-slide>
 
-      <slidem-slide fade-in background="--primary">
-        <h2 uppercase color="black">Template Literals</h2>
-        <zero-md fit bleed css-urls='["prism-atom-dark.css"]' src="markdown/template-literals.md"></zero-md>
-      </slidem-slide>
-
-      <slidem-slide fade-in background="--primary">
+      <slidem-slide slide-in background="--primary">
         <h2 uppercase color="black">Computed Object Keys</h2>
-        <zero-md fit bleed css-urls='["prism-atom-dark.css"]' src="markdown/computed-object-keys.md">
+        <div floating explanation>
+          <p color="white">Prior to ES2015, we couldn't initialize a new object with dynamic keys.</p>
+        </div>
+        <zero-md reveal css-urls='["prism-atom-dark.css"]' src="markdown/computed-object-keys-es5.md"></zero-md>
+        <zero-md reveal css-urls='["prism-atom-dark.css"]' src="markdown/computed-object-keys.md"></zero-md>
       </slidem-slide>
 
-      <slidem-slide fade-in background="--primary">
+      <slidem-slide slide-in background="--secondary">
+        <h2 uppercase color="--primary">Template Literals</h2>
+        <zero-md fit css-urls='["prism-atom-dark.css"]' src="markdown/template-literals.md"></zero-md>
+      </slidem-slide>
+
+      <slidem-slide slide-in background="--primary">
         <h2 uppercase color="black"><code>class</code> Keyword</h2>
-        <zero-md fit bleed css-urls='["prism-atom-dark.css"]' src="markdown/class-keyword.md">
+        <p color="white" floating explanation>
+          Let's get one thing very clear: <em>JavaScript does not have classes</em>. Not then, not now. The <code>class</code> keyword simply helps us write object constructors with prototype methods more concisely.
+        </p>
+        <zero-md reveal floating fit css-urls='["prism-atom-dark.css"]' src="markdown/class-keyword-es5.md"></zero-md>
+        <zero-md reveal floating fit css-urls='["prism-atom-dark.css"]' src="markdown/class-keyword.md"></zero-md>
+        <zero-md reveal floating fit css-urls='["prism-atom-dark.css"]' src="markdown/class-keyword-extends.md"></zero-md>
       </slidem-slide>
 
-      <slidem-slide fade-in background="--primary">
-        <h2 uppercase color="black">Promises</h2>
-        <zero-md fit bleed css-urls='["prism-atom-dark.css"]' src="markdown/promises.md">
+      <slidem-slide slide-in background="--secondary">
+        <h2 uppercase color="--primary">Promises</h2>
+        <p floating explanation color="black">A promise is a container (monad) for a future value. You can unwrap the value with the <code>then</code> method, or the error state with the <code>catch</code> method.</p>
+        <zero-md reveal fit css-urls='["prism-atom-dark.css"]' src="markdown/promises.md"></zero-md>
       </slidem-slide>
 
-      <slidem-slide fade-in background="--primary">
-        <h2 uppercase color="black"><code>async</code> Functions</h2>
-        <zero-md fit bleed css-urls='["prism-atom-dark.css"]' src="markdown/async-functions.md">
+      <slidem-slide slide-in background="--secondary">
+        <h2 uppercase color="--primary"><code>async</code> Functions</h2>
+        <div floating explanation>
+          <p color="black">Syntactic sugar for promise flows that makes async code look sync.</p>
+          <p color="black">Async functions <em>always</em> return promises, and any errors thrown will reject the promise.</p>
+        </div>
+        <zero-md reveal fit css-urls='["prism-atom-dark.css"]' src="markdown/async-functions.md"></zero-md>
       </slidem-slide>
 
       <slidem-slide center background="white">
-        <p fit color="--primary" uppercase>Install
+        <p fit color="--primary" uppercase>Thanks
           <span color="black">
-            <a href="https://www.npmjs.com/package/slidem">With NPM</a>
+            <a href="https://www.npmjs.com/package/slidem">For</a>
           </span>
         </p>
-        <p fit color="--primary" uppercase>Check
-          <span color="black">
-            <a href="https://github.com/ruphin/slidem">The source</a>
-          </span>
+        <p fit color="--primary" uppercase>Watching!</p>
+        <p color="black" uppercase>Read <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_2015_support_in_Mozilla">More</a></p>
+        <p style="text-align: right;">
+          <a href="mailto:benny.p@blink.gg">Benny Powers</a>
+          <a href="https://github.com/bennypowers"><img class="avatar" src="github-logo.svg" alt="Github profile"></a>
+          <a href="https://gitlab.com/bennyp"><img class="avatar" src="gitlab-logo.svg" alt="Gitlab profile"></a>
         </p>
-        <p fit color="--primary" uppercase>Read
-          <span color="black">
-            <a href="/docs">The Docs</a>
-          </span>
-        </p>
-        <p style="text-align: right;">(soon)</p>
       </slidem-slide>
     </slidem-deck>
 

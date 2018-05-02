@@ -1,3 +1,4 @@
+## The Problem: Defining Meaningful Defaults for Optional Params
 ```js
 function foo(bar, options) {
   return bar( options.baz === 'qux' ? 'ploni' : 'almoni' )
