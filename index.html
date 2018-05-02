@@ -11,7 +11,7 @@
     <meta property="og:description" content="A Short Presentation on the new JavaScript" />
     <meta property="og:site_name" content="ECMAScript Update" />
 
-    <link rel="manifest" href="/manifest.json">
+    <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700">
 
     <script src="https://unpkg.com/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
@@ -243,7 +243,7 @@
 
     <script>
     if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js'));
+      window.addEventListener('load', () => navigator.serviceWorker.register('sw.js'));
     }
     </script>
   </body>
