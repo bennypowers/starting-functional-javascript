@@ -1,0 +1,13 @@
+{
+  "name": "ECMAScript Update",
+  "short_name": "ES Update",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#FF2A69",
+  "description": "A Short Presentation on the new JavaScript.",
+  "icons": [{
+    "src": "js.jpg",
+    "sizes": "512x512",
+    "type": "image/jpg"
+  }]
+}
