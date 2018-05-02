@@ -8,7 +8,10 @@
     "@polymer/prism-element": "^3.0.0-pre.12",
     "slidem": "^1.2.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "rollup": "^0.58.2",
+    "rollup-plugin-node-resolve": "^3.3.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
