@@ -11,7 +11,7 @@ const lastFollower = async ({ userId }) => {
   }
 }
 
-fetch('/users/zoya')
+fetch('/users/sari')
   .then(handleAsJson)
   .then(lastFollower)
   .then(console.log)
