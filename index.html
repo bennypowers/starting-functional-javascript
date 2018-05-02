@@ -15,9 +15,14 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700">
 
     <script src="https://unpkg.com/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
-    <script src="https://cdn.rawgit.com/zerodevx/zero-md/v1.0.0/build/zero-md.min.js"></script>
+    <script async defer src="https://cdn.rawgit.com/zerodevx/zero-md/v1.0.0/build/zero-md.min.js"></script>
+
+    <script async type="module" src="slide-elements.js"></script>
+    <script async defer nomodule src="slide-elements.nomodule.js"></script>
+
     <style>
       :root {
+        background: var(--primary);
         --primary: #FF2A69;
         --secondary: #EDFF40;
         --bottom-offset: 106px;
@@ -78,8 +83,6 @@
 
   </head>
   <body>
-    <script type="module" src="slide-elements.js"></script>
-    <script nomodule src="slide-elements.nomodule.js"></script>
 
     <slidem-deck transition="slide-in slide-out" font="Open Sans Condensed" loading>
       <slidem-slide slide-in center background="--primary">
@@ -238,5 +241,10 @@
       </slidem-slide>
     </slidem-deck>
 
+    <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => navigator.serviceWorker.register('/sw.js'));
+    }
+    </script>
   </body>
 </html>
