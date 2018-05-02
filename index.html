@@ -12,6 +12,16 @@
     <meta property="og:site_name" content="ECMAScript Update" />
 
     <link rel="manifest" href="manifest.json">
+
+    <link rel="modulepreload" href="https://unpkg.com/gluonjs/gluon.js">
+    <link rel="modulepreload" href="https://unpkg.com/gluon-router/gluon-router.js">
+    <link rel="modulepreload" href="https://unpkg.com/fontfaceobserver/fontfaceobserver.standalone.js">
+    <link rel="modulepreload" href="https://unpkg.com/gluon-keybinding/gluon-keybinding.js">
+    <link rel="modulepreload" href="https://unpkg.com/lit-html/lib/lit-extended.js">
+    <link rel="modulepreload" href="https://unpkg.com/lit-html/lib/shady-render.js">
+    <link rel="modulepreload" href="https://unpkg.com/lit-html@0.9.0/lit-html.js">
+    <link rel="modulepreload" href="https://unpkg.com/slidem@1.2.0/slidem-slide-base.js">
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700">
 
     <script src="https://unpkg.com/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
@@ -83,6 +93,10 @@
 
   </head>
   <body>
+
+    <noscript>
+      This presentation relies on JavaScript. Please consider enabling JavaScript for this site.
+    </noscript>
 
     <slidem-deck transition="slide-in slide-out" font="Open Sans Condensed" loading>
       <slidem-slide slide-in center background="--primary">

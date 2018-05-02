@@ -4,6 +4,7 @@
   "start_url": ".",
   "display": "standalone",
   "background_color": "#FF2A69",
+  "theme_color": "#FF2A69",
   "description": "A Short Presentation on the new JavaScript.",
   "icons": [{
     "src": "js.jpg",

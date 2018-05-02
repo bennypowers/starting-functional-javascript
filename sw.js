@@ -29,7 +29,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "7649f9dee3acf4610662a7261ebe26e0"
+    "revision": "12f904edc633b26b41b9bd6aff8b752d"
   },
   {
     "url": "js.jpg",
@@ -37,7 +37,7 @@ self.__precacheManifest = [
   },
   {
     "url": "manifest.json",
-    "revision": "b6d4ba81112a421b9e6b6feae8d30e15"
+    "revision": "a2d87ddea3a4f0748467d49eea71c3b4"
   },
   {
     "url": "markdown/arrow-functions-1.md",
