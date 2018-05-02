@@ -1,7 +1,7 @@
 ## The Problem: Defining Meaningful Defaults for Optional Params
 ```js
 function foo(bar, options) {
-  return bar( options.baz === 'qux' ? 'ploni' : 'almoni' )
+  return bar( options.baz === 'qux' ? 'miriam' : 'yair' )
 }
 
 foo(console.log)  // OOPS! Forgot to pass `options`! 🤦‍♂️

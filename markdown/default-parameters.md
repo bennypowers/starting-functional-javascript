@@ -11,13 +11,13 @@ function foo(bar, options) {
 const foo = (
   bar,
   options = { baz: 'qux' }  // options defaults to { baz: 'qux' }
-) => bar( options.baz === 'qux' ? 'ploni' : 'almoni' )
+) => bar( options.baz === 'qux' ? 'reut' : 'moshe' )
 
-foo(console.log)            // ploni
-foo(console.log, {})        // almoni
+foo(console.log)            // reut
+foo(console.log, {})        // moshe
 
 foo(console.log, null)      // ✋ Careful! null won't be substituted, only undefined.
                             // TypeError: Cannot read property 'baz' of null
 
-foo(console.log, undefined) // ploni
+foo(console.log, undefined) // reut
 ```
