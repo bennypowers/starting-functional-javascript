@@ -20,40 +20,48 @@ importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.2.0/workbox
  */
 self.__precacheManifest = [
   {
-    "url": "github-logo.svg",
+    "url": "images/github-logo.svg",
     "revision": "ff66eb8ec531024561b1c1ddab593e2f"
   },
   {
-    "url": "gitlab-logo.svg",
+    "url": "images/gitlab-logo.svg",
     "revision": "350077b9246d6bcfcdb9013f7e8db87e"
   },
   {
-    "url": "index.html",
-    "revision": "73866b38735bc3cec8ab926301afc6f1"
+    "url": "images/js.192x192.png",
+    "revision": "c78666daeb55169ae48b62c1e4157ef1"
   },
   {
-    "url": "js.jpg",
-    "revision": "02287d1701e3bcce8010bd5a061e96da"
+    "url": "images/js.48x48.png",
+    "revision": "ecf3e04c840524e0d40a9e984654e2d0"
+  },
+  {
+    "url": "images/js.512x512.png",
+    "revision": "d839e4efe240c30a7b793322ff70eb5a"
+  },
+  {
+    "url": "images/js.96x96.png",
+    "revision": "121af327054a5b4745a04d066ba7add4"
+  },
+  {
+    "url": "index.html",
+    "revision": "b60819b484386e61b3d3af2d9eba1f4d"
   },
   {
     "url": "main.js",
-    "revision": "73ce46e3b06a86e1bd38c9640c3f07fb"
+    "revision": "ad22f877ae58ae354943c5d06833ac9e"
   },
   {
     "url": "main.nomodule.js",
-    "revision": "d9b2f0f39f19276f7baf277bfb572cf3"
-  },
-  {
-    "url": "manifest.json",
-    "revision": "a2d87ddea3a4f0748467d49eea71c3b4"
+    "revision": "f9adfa4e91b3bb389bb016ce7ff4ee5b"
   },
   {
     "url": "markdown/arrow-functions-1.md",
-    "revision": "ccb35675401938380f2bacb936c6206d"
+    "revision": "22399b6ca272ab0d1cc898592b617beb"
   },
   {
     "url": "markdown/arrow-functions-2.md",
-    "revision": "a51e4408252040443f29ff8f2e8d147d"
+    "revision": "8813804b2df66c5c1f5168b03deeb47f"
   },
   {
     "url": "markdown/arrow-functions-this.md",
@@ -65,7 +73,7 @@ self.__precacheManifest = [
   },
   {
     "url": "markdown/block-scope.md",
-    "revision": "8e13959086e63b822950342a1fa3e3fa"
+    "revision": "2a8f50576621dd20d487c092b43381df"
   },
   {
     "url": "markdown/class-keyword-es5.md",
@@ -81,11 +89,11 @@ self.__precacheManifest = [
   },
   {
     "url": "markdown/computed-object-keys-es5.md",
-    "revision": "6448a756398f1abe50f66eb485f7e66f"
+    "revision": "6bcb1e6658381d2ae4bf30dc4c5279b1"
   },
   {
     "url": "markdown/computed-object-keys.md",
-    "revision": "26b648d945f9e5716dc6a91830bc89a0"
+    "revision": "01ac556b08aba8cfeaae5196386d6654"
   },
   {
     "url": "markdown/concise-object-params.md",
@@ -97,15 +105,15 @@ self.__precacheManifest = [
   },
   {
     "url": "markdown/default-parameters-problem.md",
-    "revision": "ff2653eada406fe8440eec4c30307568"
+    "revision": "0562bb4866ca3d78cb9f46268cd14962"
   },
   {
     "url": "markdown/default-parameters.md",
-    "revision": "eb645c2d6e44445fa2316883fab243aa"
+    "revision": "25b812e83de25355f93d6775064b7e3d"
   },
   {
     "url": "markdown/destructuring-alias.md",
-    "revision": "b1c0c1350dd44f8070bda9aa933f4ada"
+    "revision": "be3c3b66bfe73db41828c224238271de"
   },
   {
     "url": "markdown/destructuring-array.md",
@@ -113,7 +121,7 @@ self.__precacheManifest = [
   },
   {
     "url": "markdown/destructuring-object.md",
-    "revision": "7c03a0b745281798465a0653da34b14f"
+    "revision": "81d677c567a9a2e0fd42c9a29d295482"
   },
   {
     "url": "markdown/destructuring-params.md",
@@ -125,15 +133,15 @@ self.__precacheManifest = [
   },
   {
     "url": "markdown/promises.md",
-    "revision": "0e1ee92a12ef47bbd391d35e50c6f347"
+    "revision": "777b4c8027d9a0a54fd6a1e9738d4e20"
   },
   {
     "url": "markdown/rest-spread-tricks.md",
-    "revision": "cdfefaf8b7a9624c613ebede847d6c6b"
+    "revision": "2ab303192b46bce843ea5af7c32f0fb4"
   },
   {
     "url": "markdown/rest-spread.md",
-    "revision": "47cb687a09d44f368a5809f4726f6e90"
+    "revision": "19cb21c46fe0e4a7b072275e153d9edb"
   },
   {
     "url": "markdown/template-literals-es5.md",
@@ -145,11 +153,11 @@ self.__precacheManifest = [
   },
   {
     "url": "package-lock.json",
-    "revision": "bc37b8f96184e9acafde03ad320e5d4f"
+    "revision": "a0225b30100b56f1f68025b46ea741d0"
   },
   {
     "url": "package.json",
-    "revision": "b65ea54cb778d9c40955b9fe76581d67"
+    "revision": "7a15a8a30388004ec2536cb536dfe930"
   },
   {
     "url": "prism-atom-dark.css",
@@ -162,10 +170,6 @@ self.__precacheManifest = [
   {
     "url": "rollup.config.js",
     "revision": "fe957635ece73326f7be8cf2f12265c9"
-  },
-  {
-    "url": "screenshot.png",
-    "revision": "002b8edddd4568d7def375a267626fb7"
   },
   {
     "url": "slide-elements.local.js",
