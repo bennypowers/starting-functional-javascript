@@ -24,11 +24,9 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700">
 
-    <script src="https://unpkg.com/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
-    <script async defer src="https://cdn.rawgit.com/zerodevx/zero-md/v1.0.0/build/zero-md.min.js"></script>
-
-    <script async type="module" src="slide-elements.js"></script>
-    <script async defer nomodule src="slide-elements.nomodule.js"></script>
+    <script src="https://unpkg.com/@webcomponents/webcomponentsjs/webcomponents-lite.js"></script>
+    <script nomodule src="https://unpkg.com/webcomponentsjs@1.2.0/custom-elements-es5-adapter.js" charset="utf-8"></script>
+    <script nomodule src="https://unpkg.com/babel-polyfill/6.26.0/polyfill.min.js" charset="utf-8"></script>
 
     <style>
       :root {
@@ -55,6 +53,7 @@
       }
 
       zero-md {
+        display: block;
         background: #1d1f21;
         padding: 0 1em;
         font-size: 32px;
@@ -94,7 +93,6 @@
         font-family: "Open Sans Condensed";
         text-transform: uppercase;
       }
-
 
       noscript h1 {
         line-height: 0.8;
@@ -142,6 +140,7 @@
         <p line-height="1.8">&nbsp;</p>
 
         <p fitcenter font-size="78px" color="white">Let's Begin!</p>
+        <p font-size="24px" color="white">(Arrow Keys to Navigate)</p>
       </slidem-slide>
 
       <slidem-slide id="block-scoped" slide-in background="--secondary">
@@ -175,7 +174,7 @@
           <p color="white"><code>this</code> is a notoriously cryptic keyword in JavaScript.</p>
           <p color="white">Arrow functions provide a more predictable behaviour for <code>this</code>.</p>
         </div>
-        <zero-md reveal fit css-urls='["prism-atom-dark.css"]' src="markdown/arrow-functions-this.md"></zero-md>
+        <zero-md reveal floating fit css-urls='["prism-atom-dark.css"]' src="markdown/arrow-functions-this.md"></zero-md>
       </slidem-slide>
 
       <slidem-slide slide-in background="--secondary">
@@ -188,38 +187,38 @@
 
       <slidem-slide fade-in background="--secondary">
         <h2 uppercase color="--primary">Destructuring Assignment - Arrays</h2>
-        <zero-md fit css-urls='["prism-atom-dark.css"]' src="markdown/destructuring-array.md"></zero-md>
+        <zero-md fit floating css-urls='["prism-atom-dark.css"]' src="markdown/destructuring-array.md"></zero-md>
       </slidem-slide>
 
       <slidem-slide fade-in background="--secondary">
         <h2 uppercase color="--primary">Destructuring Assignment - Objects</h2>
-        <zero-md fit css-urls='["prism-atom-dark.css"]' src="markdown/destructuring-object.md"></zero-md>
+        <zero-md fit floating css-urls='["prism-atom-dark.css"]' src="markdown/destructuring-object.md"></zero-md>
       </slidem-slide>
 
       <slidem-slide fade-in background="--secondary">
         <h2 uppercase color="--primary">Destructuring Assignment - Aliasing</h2>
-        <zero-md fit css-urls='["prism-atom-dark.css"]' src="markdown/destructuring-alias.md"></zero-md>
+        <zero-md fit floating css-urls='["prism-atom-dark.css"]' src="markdown/destructuring-alias.md"></zero-md>
       </slidem-slide>
 
       <slidem-slide fade-in background="--secondary">
         <h2 uppercase color="--primary">Destructuring Assignment - Function Params</h2>
-        <zero-md fit css-urls='["prism-atom-dark.css"]' src="markdown/destructuring-params.md"></zero-md>
+        <zero-md fit floating css-urls='["prism-atom-dark.css"]' src="markdown/destructuring-params.md"></zero-md>
       </slidem-slide>
 
       <slidem-slide slide-in background="--primary">
         <h2 uppercase color="black">Rest and Spread</h2>
-        <zero-md fit css-urls='["prism-atom-dark.css"]' src="markdown/rest-spread.md"></zero-md>
+        <zero-md fit floating css-urls='["prism-atom-dark.css"]' src="markdown/rest-spread.md"></zero-md>
       </slidem-slide>
 
       <slidem-slide fade-in background="--primary">
         <h2 uppercase color="black">Rest and Spread - Tricks</h2>
-        <zero-md fit css-urls='["prism-atom-dark.css"]' src="markdown/rest-spread-tricks.md"></zero-md>
+        <zero-md fit floating css-urls='["prism-atom-dark.css"]' src="markdown/rest-spread-tricks.md"></zero-md>
       </slidem-slide>
 
       <slidem-slide slide-in background="--primary">
         <h2 uppercase color="black">Default Parameters</h2>
         <zero-md floating fit css-urls='["prism-atom-dark.css"]' src="markdown/default-parameters-problem.md"></zero-md>
-        <zero-md reveal fit css-urls='["prism-atom-dark.css"]' src="markdown/default-parameters.md"></zero-md>
+        <zero-md reveal floating fit css-urls='["prism-atom-dark.css"]' src="markdown/default-parameters.md"></zero-md>
       </slidem-slide>
 
       <slidem-slide slide-in background="--primary">
@@ -236,14 +235,14 @@
         <div floating explanation>
           <p color="white">Prior to ES2015, we couldn't initialize a new object with dynamic keys.</p>
         </div>
-        <zero-md reveal css-urls='["prism-atom-dark.css"]' src="markdown/computed-object-keys-es5.md"></zero-md>
-        <zero-md reveal css-urls='["prism-atom-dark.css"]' src="markdown/computed-object-keys.md"></zero-md>
+        <zero-md reveal floating css-urls='["prism-atom-dark.css"]' src="markdown/computed-object-keys-es5.md"></zero-md>
+        <zero-md reveal floating css-urls='["prism-atom-dark.css"]' src="markdown/computed-object-keys.md"></zero-md>
       </slidem-slide>
 
       <slidem-slide slide-in background="--secondary">
         <h2 uppercase color="--primary">Template Literals</h2>
         <zero-md reveal floating fit css-urls='["prism-atom-dark.css"]' src="markdown/template-literals-es5.md"></zero-md>
-        <zero-md reveal fit css-urls='["prism-atom-dark.css"]' src="markdown/template-literals.md"></zero-md>
+        <zero-md reveal floating fit css-urls='["prism-atom-dark.css"]' src="markdown/template-literals.md"></zero-md>
       </slidem-slide>
 
       <slidem-slide slide-in background="--primary">
@@ -259,7 +258,7 @@
       <slidem-slide slide-in background="--secondary">
         <h2 uppercase color="--primary">Promises</h2>
         <p floating explanation color="black">A promise is a container (monad) for a future value. You can unwrap the value with the <code>then</code> method, or the error state with the <code>catch</code> method.</p>
-        <zero-md reveal fit css-urls='["prism-atom-dark.css"]' src="markdown/promises.md"></zero-md>
+        <zero-md reveal floating fit css-urls='["prism-atom-dark.css"]' src="markdown/promises.md"></zero-md>
       </slidem-slide>
 
       <slidem-slide slide-in background="--secondary">
@@ -268,7 +267,7 @@
           <p color="black">Syntactic sugar for promise flows that makes async code look sync.</p>
           <p color="black">Async functions <em>always</em> return promises, and any errors thrown will reject the promise.</p>
         </div>
-        <zero-md reveal fit css-urls='["prism-atom-dark.css"]' src="markdown/async-functions.md"></zero-md>
+        <zero-md reveal floating fit css-urls='["prism-atom-dark.css"]' src="markdown/async-functions.md"></zero-md>
       </slidem-slide>
 
       <slidem-slide fade-in center background="white">
@@ -291,6 +290,18 @@
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => navigator.serviceWorker.register('sw.js'));
     }
+
+    window.addEventListener('WebComponentsReady', () => {
+      const script = document.createElement('script');
+      script.src = 'https://cdn.rawgit.com/zerodevx/zero-md/v1.0.0/build/zero-md.min.js';
+      script.async = true;
+      script.defer = true;
+      document.head.appendChild(script);
+    });
     </script>
+
+    <script async type="module" src="slide-elements.js"></script>
+    <script async defer nomodule src="slide-elements.nomodule.js"></script>
+
   </body>
 </html>

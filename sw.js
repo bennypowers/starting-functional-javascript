@@ -11,7 +11,7 @@
  * See https://goo.gl/2aRDsh
  */
 
-importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.1.0/workbox-sw.js");
+importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.2.0/workbox-sw.js");
 
 /**
  * The workboxSW.precacheAndRoute() method efficiently caches and responds to
@@ -29,7 +29,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "e3396002c1eb25c2b0dd97b2aebd3957"
+    "revision": "efe21f87b9c09a565dc02ce89b6ee3ce"
   },
   {
     "url": "js.jpg",
@@ -137,19 +137,23 @@ self.__precacheManifest = [
   },
   {
     "url": "package-lock.json",
-    "revision": "528ffc4ec5e31416f308a239376b76ca"
+    "revision": "bc37b8f96184e9acafde03ad320e5d4f"
   },
   {
     "url": "package.json",
-    "revision": "ce14690ff409f1c0ef93c0ad7d155691"
+    "revision": "b65ea54cb778d9c40955b9fe76581d67"
   },
   {
     "url": "prism-atom-dark.css",
     "revision": "9478e865e227dccebc547e88048032ad"
   },
   {
+    "url": "README.md",
+    "revision": "4e00eb182b162d30108c8352c007a89b"
+  },
+  {
     "url": "rollup.config.js",
-    "revision": "475f8269facd4b8decc28db8356389ef"
+    "revision": "e34b35a5081c1b2f32e294ad25303d26"
   },
   {
     "url": "screenshot.png",
@@ -160,8 +164,12 @@ self.__precacheManifest = [
     "revision": "75d2500139d054d79fe383b6ac90540e"
   },
   {
+    "url": "slide-elements.local.js",
+    "revision": "c89d51250355776a9ab4b4370aebdb84"
+  },
+  {
     "url": "slide-elements.nomodule.js",
-    "revision": "ca1693882fff9cae7d8ce416997d3b89"
+    "revision": "d9b2f0f39f19276f7baf277bfb572cf3"
   },
   {
     "url": "workbox-config.js",
