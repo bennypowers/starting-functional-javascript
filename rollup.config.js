@@ -26,7 +26,7 @@ const nomodule = {
 }
 
 const modules = {
-  input: 'slide-elements.js',
+  input: 'slide-elements.local.js',
   output: {
     format: 'es',
     file: 'main.js',

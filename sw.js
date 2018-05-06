@@ -37,7 +37,7 @@ self.__precacheManifest = [
   },
   {
     "url": "main.js",
-    "revision": "5c761a02ca12e1d39b087b3d069746e0"
+    "revision": "73ce46e3b06a86e1bd38c9640c3f07fb"
   },
   {
     "url": "main.nomodule.js",
@@ -161,7 +161,7 @@ self.__precacheManifest = [
   },
   {
     "url": "rollup.config.js",
-    "revision": "ce3699c74af4078eb66446adff159553"
+    "revision": "fe957635ece73326f7be8cf2f12265c9"
   },
   {
     "url": "screenshot.png",
