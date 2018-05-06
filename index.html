@@ -128,7 +128,7 @@
       This presentation relies on JavaScript. Please consider enabling JavaScript for this site.
     </noscript>
 
-    <slidem-deck transition="slide-in slide-out" font="Open Sans Condensed" loading>
+    <slidem-deck id="deck" transition="slide-in slide-out" font="Open Sans Condensed" loading>
       <slidem-slide slide-in center background="--primary">
         <h1 uppercase fit line-height="0.8" color="White">ES Update</h1>
 
@@ -139,8 +139,9 @@
 
         <p line-height="1.8">&nbsp;</p>
 
-        <p fitcenter font-size="78px" color="white">Let's Begin!</p>
-        <p font-size="24px" color="white">(Arrow Keys to Navigate)</p>
+        <p fitcenter font-size="78px" color="white">Let's Begin!
+          <span font-size="24px">(Space or Arrow Keys to Navigate)</span>
+        </p>
       </slidem-slide>
 
       <slidem-slide id="block-scoped" slide-in background="--secondary">
@@ -288,7 +289,8 @@
 
     <script>
     if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => navigator.serviceWorker.register('sw.js'));
+      window.addEventListener('load', () =>
+        navigator.serviceWorker.register('sw.js'));
     }
 
     window.addEventListener('WebComponentsReady', () => {
@@ -297,6 +299,16 @@
       script.async = true;
       script.defer = true;
       document.head.appendChild(script);
+      const deck = document.getElementById('deck');
+      const forward = () => deck.$.forward.onclick();
+      const backward = () => deck.$.backward.onclick();
+      deck.addEventListener('click', forward);
+      document.body.addEventListener('keyup', (event) =>
+          event.code === 'Space' ? forward()
+        : event.code === 'Delete' ? backward()
+        : event.code === 'Backspace' ? backward()
+        : event.code === 'ArrowLeft' ? backward()
+        : null);
     });
     </script>
 
