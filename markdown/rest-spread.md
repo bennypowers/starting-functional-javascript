@@ -3,7 +3,7 @@ const firstAndRest = (first, ...rest) =>      // rest aka gather
   console.log(first, ...rest)                 // spread
 
 const nAry = (...args) => {                   // gather args
-  const [, snd, ...rest] = args               // gather rest
+  const [ , snd, ...rest] = args               // gather rest
   console.log(
     'snd: ', snd,
     'rest: ', rest

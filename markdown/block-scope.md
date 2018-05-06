@@ -9,7 +9,7 @@ Functions used to be the only way to get a private scope.
 console.log(priv)                     // Uncaught ReferenceError: priv is not defined
 ```
 
-## New Hotness Blockscope
+## New Hotness Block Scope
 
 ```js
 if (partyTime) {

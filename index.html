@@ -11,16 +11,7 @@
     <meta property="og:description" content="A Short Presentation on the new JavaScript" />
     <meta property="og:site_name" content="ECMAScript Update" />
 
-    <link rel="manifest" href="manifest.json">
-
-    <link rel="modulepreload" href="https://unpkg.com/gluonjs/gluon.js">
-    <link rel="modulepreload" href="https://unpkg.com/gluon-router/gluon-router.js">
-    <link rel="modulepreload" href="https://unpkg.com/fontfaceobserver/fontfaceobserver.standalone.js">
-    <link rel="modulepreload" href="https://unpkg.com/gluon-keybinding/gluon-keybinding.js">
-    <link rel="modulepreload" href="https://unpkg.com/lit-html/lib/lit-extended.js">
-    <link rel="modulepreload" href="https://unpkg.com/lit-html/lib/shady-render.js">
-    <link rel="modulepreload" href="https://unpkg.com/lit-html@0.9.0/lit-html.js">
-    <link rel="modulepreload" href="https://unpkg.com/slidem@1.2.0/slidem-slide-base.js">
+    <link rel="manifest" href="manifest.webmanifest">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700">
 
@@ -147,7 +138,7 @@
       <slidem-slide id="block-scoped" slide-in background="--secondary">
         <h2 uppercase color="--primary">Block Scoped Variables</h2>
         <div floating explanation>
-          <p color="black">ES Joins the ranks of other languages with block scoping.</p>
+          <p color="black">JavaScript Joins the ranks of other languages with block scoping</p>
         </div>
         <zero-md reveal floating css-urls='["prism-atom-dark.css"]' src="markdown/block-scope.md"></zero-md>
       </slidem-slide>
@@ -155,7 +146,7 @@
       <slidem-slide slide-in background="--secondary">
         <h2 uppercase color="--primary"><code>let</code> and <code>const</code></h2>
         <div floating explanation>
-          <p color="black">New keywords for declaring block-scoped mutable and immutable variables.</p>
+          <p color="black">New keywords for declaring block-scoped mutable and immutable variables</p>
         </div>
         <zero-md reveal floating css-urls='["prism-atom-dark.css"]' src="markdown/let-const.md"></zero-md>
       </slidem-slide>
@@ -163,7 +154,7 @@
       <slidem-slide slide-in background="--primary">
         <h2 uppercase color="black">Arrow Functions</h2>
         <div floating explanation>
-          <p color="white">A concise way to define functions with expressions</p>
+          <p color="white">A concise way to define function expressions</p>
         </div>
         <zero-md reveal floating css-urls='["prism-atom-dark.css"]' src="markdown/arrow-functions-1.md"></zero-md>
         <zero-md reveal floating css-urls='["prism-atom-dark.css"]' src="markdown/arrow-functions-2.md"></zero-md>
@@ -172,8 +163,8 @@
       <slidem-slide slide-in background="--primary">
         <h2 uppercase color="black">Arrow Functions - <code>this</code> Binding</h2>
         <div floating explanation>
-          <p color="white"><code>this</code> is a notoriously cryptic keyword in JavaScript.</p>
-          <p color="white">Arrow functions provide a more predictable behaviour for <code>this</code>.</p>
+          <p color="white"><code>this</code> is a notoriously cryptic keyword in JavaScript</p>
+          <p color="white">Arrow functions provide a more predictable behaviour for <code>this</code></p>
         </div>
         <zero-md reveal floating fit css-urls='["prism-atom-dark.css"]' src="markdown/arrow-functions-this.md"></zero-md>
       </slidem-slide>
@@ -181,8 +172,8 @@
       <slidem-slide slide-in background="--secondary">
         <h2 uppercase color="--primary">Destructuring Assignment</h2>
         <div floating explanation>
-          <p color="black" line-height="1.5">Destructuring let's us describe the structure of data while assigning names to its members.</p>
-          <p color="black" line-height="1.5">It can help reduce surface area for typo bugs and encourages immutable flows, and reduce boilerplate when defining functions.</p>
+          <p color="black" line-height="1.5">Destructuring lets us describe the structure of data while simultaneously assigning names to its members</p>
+          <p color="black" line-height="1.5">It reduces the surface area for bugs, encourages immutable flows, and reduces boilerplate when defining functions</p>
         </div>
       </slidem-slide>
 
@@ -225,7 +216,7 @@
       <slidem-slide slide-in background="--primary">
         <h2 uppercase color="black">Concise Object Syntax</h2>
         <div floating explanation>
-          <p color="white">When initializing objects, if you have a variable with the same name as one of your keys, you can skip the assignment.</p>
+          <p color="white">When initializing objects, if you have a variable with the same name as one of your keys, you can skip the assignment</p>
         </div>
         <zero-md floating reveal css-urls='["prism-atom-dark.css"]' src="markdown/concise-object.md"></zero-md>
         <zero-md floating reveal bleed fit css-urls='["prism-atom-dark.css"]' src="markdown/concise-object-params.md"></zero-md>
@@ -234,7 +225,7 @@
       <slidem-slide slide-in background="--primary">
         <h2 uppercase color="black">Computed Object Keys</h2>
         <div floating explanation>
-          <p color="white">Prior to ES2015, we couldn't initialize a new object with dynamic keys.</p>
+          <p color="white">Prior to ES2015, we couldn't initialize a new object with dynamic keys</p>
         </div>
         <zero-md reveal floating css-urls='["prism-atom-dark.css"]' src="markdown/computed-object-keys-es5.md"></zero-md>
         <zero-md reveal floating css-urls='["prism-atom-dark.css"]' src="markdown/computed-object-keys.md"></zero-md>
@@ -248,9 +239,7 @@
 
       <slidem-slide slide-in background="--primary">
         <h2 uppercase color="black"><code>class</code> Keyword</h2>
-        <p color="white" floating explanation>
-          Let's get one thing very clear: <em>JavaScript does not have classes</em>. Not then, not now. The <code>class</code> keyword simply helps us write object constructors with prototype methods more concisely.
-        </p>
+        <p color="white" floating explanation>Let's get one thing very clear: <em>JavaScript does not have classes</em> - Not then, and not now. The <code>class</code> keyword simply helps us write object constructors with their prototype methods more concisely</p>
         <zero-md reveal floating fit css-urls='["prism-atom-dark.css"]' src="markdown/class-keyword-es5.md"></zero-md>
         <zero-md reveal floating fit css-urls='["prism-atom-dark.css"]' src="markdown/class-keyword.md"></zero-md>
         <zero-md reveal floating fit css-urls='["prism-atom-dark.css"]' src="markdown/class-keyword-extends.md"></zero-md>
@@ -258,15 +247,15 @@
 
       <slidem-slide slide-in background="--secondary">
         <h2 uppercase color="--primary">Promises</h2>
-        <p floating explanation color="black">A promise is a container (monad) for a future value. You can unwrap the value with the <code>then</code> method, or the error state with the <code>catch</code> method.</p>
+        <p floating explanation color="black">A promise is a container (monad) for a future value. You can unwrap the value with the <code>then</code> method, or the error state with the <code>catch</code> method</p>
         <zero-md reveal floating fit css-urls='["prism-atom-dark.css"]' src="markdown/promises.md"></zero-md>
       </slidem-slide>
 
       <slidem-slide slide-in background="--secondary">
         <h2 uppercase color="--primary"><code>async</code> Functions</h2>
         <div floating explanation>
-          <p color="black">Syntactic sugar for promise flows that makes async code look sync.</p>
-          <p color="black">Async functions <em>always</em> return promises, and any errors thrown will reject the promise.</p>
+          <p color="black">Syntactic sugar for promise flows that makes async code look sync</p>
+          <p color="black">Async functions <em>always</em> return promises, and any errors thrown will reject the promise</p>
         </div>
         <zero-md reveal floating fit css-urls='["prism-atom-dark.css"]' src="markdown/async-functions.md"></zero-md>
       </slidem-slide>

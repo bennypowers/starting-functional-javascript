@@ -15,5 +15,7 @@ function addAll(...args) {
   }, 0);
 }
 
-addAll(1, 2, 3); // 6
+identity(2)     // 2
+prod(2, 3)      // 6
+addAll(1, 2, 3) // 6
 ```

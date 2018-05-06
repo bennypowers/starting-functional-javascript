@@ -1,5 +1,6 @@
 ## Aliasing Properties
 Super useful when different APIs use different names.
+
 ```js
 const biker = {
   user_name: 'Dov',
