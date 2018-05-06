@@ -2,11 +2,11 @@ import resolve from 'rollup-plugin-node-resolve';
 import babel from 'rollup-plugin-babel';
 import uglify from 'rollup-plugin-uglify';
 
-export default {
+const nomodule = {
   input: 'slide-elements.local.js',
   output: {
     format: 'iife',
-    file: 'slide-elements.nomodule.js',
+    file: 'main.nomodule.js',
     name: 'ESUpdate'
   },
   plugins: [
@@ -24,3 +24,26 @@ export default {
     })
   ]
 }
+
+const modules = {
+  input: 'slide-elements.js',
+  output: {
+    format: 'es',
+    file: 'main.js',
+  },
+  plugins: [
+    resolve(),
+    uglify({
+      warnings: true,
+      keep_fnames: true,
+      sourceMap: true,
+      compress: { passes: 2 },
+      mangle: { properties: false, keep_fnames: true }
+    })
+  ]
+}
+
+export default [
+  nomodule,
+  modules
+]

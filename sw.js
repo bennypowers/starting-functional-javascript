@@ -29,11 +29,19 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "efe21f87b9c09a565dc02ce89b6ee3ce"
+    "revision": "73866b38735bc3cec8ab926301afc6f1"
   },
   {
     "url": "js.jpg",
     "revision": "02287d1701e3bcce8010bd5a061e96da"
+  },
+  {
+    "url": "main.js",
+    "revision": "5c761a02ca12e1d39b087b3d069746e0"
+  },
+  {
+    "url": "main.nomodule.js",
+    "revision": "d9b2f0f39f19276f7baf277bfb572cf3"
   },
   {
     "url": "manifest.json",
@@ -153,15 +161,11 @@ self.__precacheManifest = [
   },
   {
     "url": "rollup.config.js",
-    "revision": "e34b35a5081c1b2f32e294ad25303d26"
+    "revision": "ce3699c74af4078eb66446adff159553"
   },
   {
     "url": "screenshot.png",
     "revision": "002b8edddd4568d7def375a267626fb7"
-  },
-  {
-    "url": "slide-elements.js",
-    "revision": "75d2500139d054d79fe383b6ac90540e"
   },
   {
     "url": "slide-elements.local.js",
