@@ -44,8 +44,12 @@ self.__precacheManifest = [
     "revision": "121af327054a5b4745a04d066ba7add4"
   },
   {
+    "url": "images/poster.png",
+    "revision": "77da0859599d52265240a606d2615d0e"
+  },
+  {
     "url": "index.html",
-    "revision": "b60819b484386e61b3d3af2d9eba1f4d"
+    "revision": "bb4ac7f55fe8bae7aa0b1703781ae15b"
   },
   {
     "url": "main.js",
