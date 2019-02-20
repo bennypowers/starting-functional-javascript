@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <title>ECMAScript Update</title>
+    <title>Starting Functional JavaScript</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
     <meta name="description" content="A Short Presentation on the new JavaScript" />
-    <meta name="theme-color" content="#FF2A69">
-    <meta property="og:title" content="ECMAScript Update" />
+    <meta name="theme-color" content="#">
+    <meta property="og:title" content="Starting Functional JavaScript" />
     <meta property="og:locale" content="en_US" />
-    <meta property="og:description" content="A Short Presentation on the new JavaScript" />
-    <meta property="og:site_name" content="ECMAScript Update" />
-    <meta property="og:image" content="https://bennypowers.github.io/ecmascript-update/images/poster.png" />
-    <meta property="og:image:alt" content="ES Update. A Wee Catch Up On the Language you Thought you Knew" />
+    <meta property="og:description" content="A Short Presentation on functional JavaScript" />
+    <meta property="og:site_name" content="Starting Functional JavaScript" />
+    <meta property="og:image" content="https://bennypowers.github.io/starting-functional-javascript/images/poster.png" />
+    <meta property="og:image:alt" content="Starting Functional JavaScript" />
     <meta property="og:type" content="website" />
 
     <link rel="manifest" href="manifest.webmanifest">
-    <link rel="canonical" href="https://bennypowers.github.io/ecmascript-update/">
+    <link rel="canonical" href="https://bennypowers.github.io/starting-functional-javascript/">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700">
 
@@ -26,8 +26,8 @@
     <style>
       :root {
         background: var(--primary);
-        --primary: #FF2A69;
-        --secondary: #EDFF40;
+        --primary: #7ED9D9;
+        --secondary: #4362AA;
         --bottom-offset: 106px;
       }
 
@@ -80,6 +80,14 @@
         margin: 2em;
       }
 
+      [fullheight] {
+        height: 100%;
+      }
+
+      [right] {
+        float: right;
+      }
+
       .avatar {
         max-width: 36px;
       }
@@ -105,13 +113,35 @@
         white-space: nowrap;
         font-size: 6vw;
       }
+
+      #pure-functions-header h2 {
+        margin-top: 60vh;
+      }
+
+      #pure-functions,
+      #pure-functions-about,
+      #currying-header {
+        color: white;
+      }
+
+      #currying-header h2 {
+        background: rgba(255, 255, 255, 0.5)
+      }
+
+      #currying-header h3 {
+        background: rgba(0,0,0,0.5)
+      }
     </style>
 
   </head>
   <body>
 
     <noscript>
-      <h1 uppercase fit line-height="0.8" color="White">ES Update</h1>
+      <h1>
+        <span uppercase fit line-height="0.8" color="white">Starting</span>
+        <span uppercase fit line-height="0.8" color="black">Functional</span>
+        <span uppercase fit line-height="0.8" color="white">JavaScript</span>
+      </h1>
 
       <p line-height="1.8">&nbsp;</p>
 
@@ -125,34 +155,47 @@
 
     <slidem-deck id="deck" transition="slide-in slide-out" font="Open Sans Condensed" loading>
       <slidem-slide slide-in center background="--primary">
-        <h1 uppercase fit line-height="0.8" color="White">ES Update</h1>
+        <h1>
+          <span uppercase fit line-height="0.6" color="white">Starting</span>
+          <span uppercase fit line-height="0.8" color="black">Functional</span>
+          <span uppercase fit line-height="0.8" color="white">JavaScript</span>
+        </h1>
 
         <p line-height="1.8">&nbsp;</p>
 
-        <p uppercase fit color="black">A Wee Catch Up On the Language</p>
-        <p uppercase fit color="white">you Thought you Knew</p>
-
-        <p line-height="1.8">&nbsp;</p>
-
-        <p fitcenter font-size="78px" color="white">Let's Begin!
-          <span font-size="24px">(Space or Arrow Keys to Navigate)</span>
-        </p>
+        <p fitcenter font-size="24px" color="white" style="float:right;">(Space or Arrow Keys to Navigate)</p>
       </slidem-slide>
 
-      <slidem-slide id="block-scoped" slide-in background="--secondary">
-        <h2 uppercase color="--primary">Block Scoped Variables</h2>
-        <div floating explanation>
-          <p color="black">JavaScript Joins the ranks of other languages with block scoping</p>
-        </div>
-        <zero-md reveal floating css-urls='["prism-atom-dark.css"]' src="markdown/block-scope.md"></zero-md>
+      <slidem-slide id="pure-functions-header" slide-in darken-background="0.7" background="/images/red-heifer.jpg">
+        <h2 fit uppercase color="--primary">Pure Functions</h2>
       </slidem-slide>
 
-      <slidem-slide slide-in background="--secondary">
-        <h2 uppercase color="--primary"><code>let</code> and <code>const</code></h2>
-        <div floating explanation>
-          <p color="black">New keywords for declaring block-scoped mutable and immutable variables</p>
-        </div>
-        <zero-md reveal floating css-urls='["prism-atom-dark.css"]' src="markdown/let-const.md"></zero-md>
+      <slidem-slide id="pure-functions" fade-in darken-background="0.7" background="/images/red-heifer.jpg">
+        <p>Functions that have no <em>side effects</em> are said to be pure.</p>
+        <zero-md reveal css-urls='["prism-atom-dark.css"]' src="markdown/pure-functions-1.md"></zero-md>
+        <zero-md reveal css-urls='["prism-atom-dark.css"]' src="markdown/pure-functions-2.md"></zero-md>
+        <zero-md reveal css-urls='["prism-atom-dark.css"]' src="markdown/pure-functions-3.md"></zero-md>
+        <zero-md reveal css-urls='["prism-atom-dark.css"]' src="markdown/pure-functions-4.md"></zero-md>
+      </slidem-slide>
+
+      <slidem-slide id="pure-functions-about" fade-in darken-background="0.7" background="/images/red-heifer.jpg">
+        <p line-height="2">Pure functions are <em>useless</em></p>
+        <p reveal line-height="2"><em>Easily tested</em></p>
+        <p reveal line-height="2">And <em>Referentially Transparent</em>.</p>
+        <zero-md reveal css-urls='["prism-atom-dark.css"]' src="markdown/pure-functions-5.md"></zero-md>
+      </slidem-slide>
+
+      <slidem-slide id="currying-header" slide-in background="/images/curry.jpg">
+        <h2 uppercase fit color="--secondary" line-height="1">Currying</h2>
+        <p fit color="white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+        <h3 uppercase fit color="--primary">Partial Application</h3>
+      </slidem-slide>
+
+      <slidem-slide fade-in background="/images/curry.jpg" darken-background="0.5">
+        <h2 uppercase color="--primary">Curried Functions</h2>
+        <p color="white">Take their arguments one at a time.</p>
+        <zero-md style="font-size:150%;" reveal css-urls='["prism-atom-dark.css"]' src="markdown/curried-functions.md"></zero-md>
+        <zero-md style="font-size:150%;" reveal css-urls='["prism-atom-dark.css"]' src="markdown/curried-functions-2.md"></zero-md>
       </slidem-slide>
 
       <slidem-slide slide-in background="--primary">

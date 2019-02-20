@@ -11,7 +11,7 @@
  * See https://goo.gl/2aRDsh
  */
 
-importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.2.0/workbox-sw.js");
+importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 workbox.skipWaiting();
 workbox.clientsClaim();
@@ -51,12 +51,16 @@ self.__precacheManifest = [
     "revision": "77da0859599d52265240a606d2615d0e"
   },
   {
+    "url": "images/red-heifer.jpg",
+    "revision": "96b5f7b633f50a33827d04637c7d449e"
+  },
+  {
     "url": "index.html",
-    "revision": "bb4ac7f55fe8bae7aa0b1703781ae15b"
+    "revision": "9c4c3c76b2eb932bce959e8370e3f38a"
   },
   {
     "url": "main.js",
-    "revision": "ad22f877ae58ae354943c5d06833ac9e"
+    "revision": "10f26ddd2a34ba23227b78df15a42235"
   },
   {
     "url": "main.nomodule.js",
@@ -160,11 +164,11 @@ self.__precacheManifest = [
   },
   {
     "url": "package-lock.json",
-    "revision": "a0225b30100b56f1f68025b46ea741d0"
+    "revision": "5b2f988f9cea4a2b1e2d1ffd6168d3f8"
   },
   {
     "url": "package.json",
-    "revision": "7a15a8a30388004ec2536cb536dfe930"
+    "revision": "36faad951bd80336e6a8fdcbdec38603"
   },
   {
     "url": "prism-atom-dark.css",
@@ -172,11 +176,11 @@ self.__precacheManifest = [
   },
   {
     "url": "README.md",
-    "revision": "4e00eb182b162d30108c8352c007a89b"
+    "revision": "653f29b940509a2037b0fee34c7fce0d"
   },
   {
     "url": "rollup.config.js",
-    "revision": "fe957635ece73326f7be8cf2f12265c9"
+    "revision": "67f542f54c5be90a9c19036fe88db9bb"
   },
   {
     "url": "slide-elements.local.js",

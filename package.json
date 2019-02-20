@@ -4,19 +4,21 @@
   "description": "",
   "main": "index.html",
   "dependencies": {
-    "@polymer/marked-element": "^3.0.0-pre.12",
-    "@polymer/prism-element": "^3.0.0-pre.12",
-    "slidem": "^1.2.0"
+    "@polymer/marked-element": "^3.0.1",
+    "@polymer/prism-element": "^3.0.1",
+    "slidem": "^1.2.7"
   },
   "devDependencies": {
+    "@babel/core": "^7.3.3",
     "babel-core": "^6.26.3",
     "babel-plugin-external-helpers": "^6.22.0",
-    "babel-preset-env": "^1.6.1",
-    "rollup": "^0.58.2",
-    "rollup-plugin-babel": "^3.0.4",
-    "rollup-plugin-node-resolve": "^3.3.0",
-    "rollup-plugin-uglify": "^3.0.0",
-    "workbox-cli": "^3.1.0"
+    "babel-preset-env": "^1.7.0",
+    "rollup": "^1.2.2",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-node-resolve": "^4.0.0",
+    "rollup-plugin-terser": "^4.0.4",
+    "rollup-plugin-uglify": "^6.0.2",
+    "workbox-cli": "^3.6.3"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
