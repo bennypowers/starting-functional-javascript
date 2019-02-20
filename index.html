@@ -19,9 +19,24 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700">
 
-    <script src="https://unpkg.com/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
-    <script nomodule src="https://unpkg.com/webcomponentsjs@1.2.0/custom-elements-es5-adapter.js" charset="utf-8"></script>
-    <script nomodule src="https://unpkg.com/babel-polyfill/6.26.0/polyfill.min.js" charset="utf-8"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2/webcomponents-loader.js" defer></script>
+    <script type="module">
+      WebComponents.waitFor(() => {
+        let el = document.createElement('script');
+        el.src = 'https://cdn.jsdelivr.net/gh/zerodevx/zero-md@1/build/zero-md.min.js';
+        document.head.appendChild(el);
+      });
+    </script>
+
+    <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () =>
+        navigator.serviceWorker.register('sw.js'));
+    }
+    </script>
+
+    <script async type="module" src="main.js"></script>
+    <script async defer nomodule src="main.nomodule.js"></script>
 
     <style>
       :root {
@@ -131,6 +146,10 @@
       #currying-header h3 {
         background: rgba(0,0,0,0.5)
       }
+
+      [large] {
+        font-size: 100%;
+      }
     </style>
 
   </head>
@@ -154,16 +173,18 @@
     </noscript>
 
     <slidem-deck id="deck" transition="slide-in slide-out" font="Open Sans Condensed" loading>
-      <slidem-slide slide-in center background="--primary">
+      <gluon-keybinding key=" " slot="forward"></gluon-keybinding>
+      <gluon-keybinding key="Backspace" slot="backward"></gluon-keybinding>
+      <slidem-slide slide-in center background="white">
         <h1>
-          <span uppercase fit line-height="0.6" color="white">Starting</span>
-          <span uppercase fit line-height="0.8" color="black">Functional</span>
-          <span uppercase fit line-height="0.8" color="white">JavaScript</span>
+          <span uppercase fit line-height="0.6" color="--secondary">Starting</span>
+          <span uppercase fit line-height="0.8" color="--primary">Functional</span>
+          <span uppercase fit line-height="0.8" color="--secondary">JavaScript</span>
         </h1>
 
         <p line-height="1.8">&nbsp;</p>
 
-        <p fitcenter font-size="24px" color="white" style="float:right;">(Space or Arrow Keys to Navigate)</p>
+        <p fitcenter font-size="24px" color="black" style="float:right;">(Space or Arrow Keys to Navigate)</p>
       </slidem-slide>
 
       <slidem-slide id="pure-functions-header" slide-in darken-background="0.7" background="/images/red-heifer.jpg">
@@ -182,7 +203,7 @@
         <p line-height="2">Pure functions are <em>useless</em></p>
         <p reveal line-height="2"><em>Easily tested</em></p>
         <p reveal line-height="2">And <em>Referentially Transparent</em>.</p>
-        <zero-md reveal css-urls='["prism-atom-dark.css"]' src="markdown/pure-functions-5.md"></zero-md>
+        <zero-md large reveal css-urls='["prism-atom-dark.css"]' src="markdown/pure-functions-5.md"></zero-md>
       </slidem-slide>
 
       <slidem-slide id="currying-header" slide-in background="/images/curry.jpg">
@@ -191,120 +212,46 @@
         <h3 uppercase fit color="--primary">Partial Application</h3>
       </slidem-slide>
 
-      <slidem-slide fade-in background="/images/curry.jpg" darken-background="0.5">
+      <slidem-slide id="curried-functions" fade-in background="/images/curry.jpg" darken-background="0.5">
         <h2 uppercase color="--primary">Curried Functions</h2>
         <p color="white">Take their arguments one at a time.</p>
-        <zero-md style="font-size:150%;" reveal css-urls='["prism-atom-dark.css"]' src="markdown/curried-functions.md"></zero-md>
-        <zero-md style="font-size:150%;" reveal css-urls='["prism-atom-dark.css"]' src="markdown/curried-functions-2.md"></zero-md>
+        <zero-md large reveal css-urls='["prism-atom-dark.css"]' src="markdown/curried-functions.md"></zero-md>
+        <zero-md large reveal css-urls='["prism-atom-dark.css"]' src="markdown/curried-functions-2.md"></zero-md>
       </slidem-slide>
 
-      <slidem-slide slide-in background="--primary">
-        <h2 uppercase color="black">Arrow Functions</h2>
-        <div floating explanation>
-          <p color="white">A concise way to define function expressions</p>
-        </div>
-        <zero-md reveal floating css-urls='["prism-atom-dark.css"]' src="markdown/arrow-functions-1.md"></zero-md>
-        <zero-md reveal floating css-urls='["prism-atom-dark.css"]' src="markdown/arrow-functions-2.md"></zero-md>
+      <slidem-slide id="partial-application" fade-in background="/images/curry.jpg" darken-background="0.5">
+        <h2 uppercase color="--primary">Partial Application</h2>
+        <p color="white">Use closure to defer computation.</p>
+        <zero-md large reveal css-urls='["prism-atom-dark.css"]' src="markdown/partial-application-1.md"></zero-md>
+        <zero-md large reveal css-urls='["prism-atom-dark.css"]' src="markdown/partial-application-2.md"></zero-md>
       </slidem-slide>
 
-      <slidem-slide slide-in background="--primary">
-        <h2 uppercase color="black">Arrow Functions - <code>this</code> Binding</h2>
-        <div floating explanation>
-          <p color="white"><code>this</code> is a notoriously cryptic keyword in JavaScript</p>
-          <p color="white">Arrow functions provide a more predictable behaviour for <code>this</code></p>
-        </div>
-        <zero-md reveal floating fit css-urls='["prism-atom-dark.css"]' src="markdown/arrow-functions-this.md"></zero-md>
+      <slidem-slide id="crocks" fade-in background="--secondary">
+        <h2 uppercase>Crocks</h2>
+        <p color="white">A Library of Algebric Data Types and Functional Helpers</p>
+        <p color="white" style="margin-bottom: 40px">Crock's helper functions come curried by default</p>
+        <zero-md large reveal floating css-urls='["prism-atom-dark.css"]' src="markdown/crocks-propOr-1.md"></zero-md>
+        <zero-md large reveal floating css-urls='["prism-atom-dark.css"]' src="markdown/crocks-propOr-2.md"></zero-md>
+        <zero-md large reveal floating css-urls='["prism-atom-dark.css"]' src="markdown/crocks-propPathOr.md"></zero-md>
       </slidem-slide>
 
-      <slidem-slide slide-in background="--secondary">
-        <h2 uppercase color="--primary">Destructuring Assignment</h2>
-        <div floating explanation>
-          <p color="black" line-height="1.5">Destructuring lets us describe the structure of data while simultaneously assigning names to its members</p>
-          <p color="black" line-height="1.5">It reduces the surface area for bugs, encourages immutable flows, and reduces boilerplate when defining functions</p>
-        </div>
+      <slidem-slide id="composition" fade-in background="--primary">
+        <h2 uppercase>Function Composition</h2>
+        <p explanation floating>Reduces many functions to one by applying each outer function to the application of the inner function.</p>
+        <zero-md large reveal floating css-urls='["prism-atom-dark.css"]' src="markdown/binary-compose.md"></zero-md>
+        <zero-md reveal floating css-urls='["prism-atom-dark.css"]' src="markdown/crocks-compose.md"></zero-md>
       </slidem-slide>
 
-      <slidem-slide fade-in background="--secondary">
-        <h2 uppercase color="--primary">Destructuring Assignment - Arrays</h2>
-        <zero-md fit floating css-urls='["prism-atom-dark.css"]' src="markdown/destructuring-array.md"></zero-md>
+      <slidem-slide id="pointfree" fade-in background="--primary">
+        <h2 uppercase>Pointfree Style</h2>
+        <p explanation floating>Functions which reference their own data are said to be "pointed". Likewise, functions which do not reference their parameters are said to be "pointfree"</p>
+        <zero-md large reveal floating css-urls='["prism-atom-dark.css"]' src="markdown/pointfree-1.md"></zero-md>
       </slidem-slide>
 
-      <slidem-slide fade-in background="--secondary">
-        <h2 uppercase color="--primary">Destructuring Assignment - Objects</h2>
-        <zero-md fit floating css-urls='["prism-atom-dark.css"]' src="markdown/destructuring-object.md"></zero-md>
-      </slidem-slide>
-
-      <slidem-slide fade-in background="--secondary">
-        <h2 uppercase color="--primary">Destructuring Assignment - Aliasing</h2>
-        <zero-md fit floating css-urls='["prism-atom-dark.css"]' src="markdown/destructuring-alias.md"></zero-md>
-      </slidem-slide>
-
-      <slidem-slide fade-in background="--secondary">
-        <h2 uppercase color="--primary">Destructuring Assignment - Function Params</h2>
-        <zero-md fit floating css-urls='["prism-atom-dark.css"]' src="markdown/destructuring-params.md"></zero-md>
-      </slidem-slide>
-
-      <slidem-slide slide-in background="--primary">
-        <h2 uppercase color="black">Rest and Spread</h2>
-        <zero-md fit floating css-urls='["prism-atom-dark.css"]' src="markdown/rest-spread.md"></zero-md>
-      </slidem-slide>
-
-      <slidem-slide fade-in background="--primary">
-        <h2 uppercase color="black">Rest and Spread - Tricks</h2>
-        <zero-md fit floating css-urls='["prism-atom-dark.css"]' src="markdown/rest-spread-tricks.md"></zero-md>
-      </slidem-slide>
-
-      <slidem-slide slide-in background="--primary">
-        <h2 uppercase color="black">Default Parameters</h2>
-        <zero-md floating fit css-urls='["prism-atom-dark.css"]' src="markdown/default-parameters-problem.md"></zero-md>
-        <zero-md reveal floating fit css-urls='["prism-atom-dark.css"]' src="markdown/default-parameters.md"></zero-md>
-      </slidem-slide>
-
-      <slidem-slide slide-in background="--primary">
-        <h2 uppercase color="black">Concise Object Syntax</h2>
-        <div floating explanation>
-          <p color="white">When initializing objects, if you have a variable with the same name as one of your keys, you can skip the assignment</p>
-        </div>
-        <zero-md floating reveal css-urls='["prism-atom-dark.css"]' src="markdown/concise-object.md"></zero-md>
-        <zero-md floating reveal bleed fit css-urls='["prism-atom-dark.css"]' src="markdown/concise-object-params.md"></zero-md>
-      </slidem-slide>
-
-      <slidem-slide slide-in background="--primary">
-        <h2 uppercase color="black">Computed Object Keys</h2>
-        <div floating explanation>
-          <p color="white">Prior to ES2015, we couldn't initialize a new object with dynamic keys</p>
-        </div>
-        <zero-md reveal floating css-urls='["prism-atom-dark.css"]' src="markdown/computed-object-keys-es5.md"></zero-md>
-        <zero-md reveal floating css-urls='["prism-atom-dark.css"]' src="markdown/computed-object-keys.md"></zero-md>
-      </slidem-slide>
-
-      <slidem-slide slide-in background="--secondary">
-        <h2 uppercase color="--primary">Template Literals</h2>
-        <zero-md reveal floating fit css-urls='["prism-atom-dark.css"]' src="markdown/template-literals-es5.md"></zero-md>
-        <zero-md reveal floating fit css-urls='["prism-atom-dark.css"]' src="markdown/template-literals.md"></zero-md>
-      </slidem-slide>
-
-      <slidem-slide slide-in background="--primary">
-        <h2 uppercase color="black"><code>class</code> Keyword</h2>
-        <p color="white" floating explanation>Let's get one thing very clear: <em>JavaScript does not have classes</em> - Not then, and not now. The <code>class</code> keyword simply helps us write object constructors with their prototype methods more concisely</p>
-        <zero-md reveal floating fit css-urls='["prism-atom-dark.css"]' src="markdown/class-keyword-es5.md"></zero-md>
-        <zero-md reveal floating fit css-urls='["prism-atom-dark.css"]' src="markdown/class-keyword.md"></zero-md>
-        <zero-md reveal floating fit css-urls='["prism-atom-dark.css"]' src="markdown/class-keyword-extends.md"></zero-md>
-      </slidem-slide>
-
-      <slidem-slide slide-in background="--secondary">
-        <h2 uppercase color="--primary">Promises</h2>
-        <p floating explanation color="black">A promise is a container (monad) for a future value. You can unwrap the value with the <code>then</code> method, or the error state with the <code>catch</code> method</p>
-        <zero-md reveal floating fit css-urls='["prism-atom-dark.css"]' src="markdown/promises.md"></zero-md>
-      </slidem-slide>
-
-      <slidem-slide slide-in background="--secondary">
-        <h2 uppercase color="--primary"><code>async</code> Functions</h2>
-        <div floating explanation>
-          <p color="black">Syntactic sugar for promise flows that makes async code look sync</p>
-          <p color="black">Async functions <em>always</em> return promises, and any errors thrown will reject the promise</p>
-        </div>
-        <zero-md reveal floating fit css-urls='["prism-atom-dark.css"]' src="markdown/async-functions.md"></zero-md>
+      <slidem-slide id="pointfree" fade-in background="--primary">
+        <h2 uppercase>Data-Last</h2>
+        <p explanation floating>With curried and point-free functions, always take your data as the last parameter.</p>
+        <zero-md reveal floating css-urls='["prism-atom-dark.css"]' src="markdown/pointfree-2.md"></zero-md>
       </slidem-slide>
 
       <slidem-slide fade-in center background="white">
@@ -316,40 +263,12 @@
         <p fit color="--primary" uppercase>Watching!</p>
         <p color="black" uppercase>Read <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_2015_support_in_Mozilla">More</a></p>
         <p style="text-align: right;">
-          <a href="mailto:benny.p@blink.gg">Benny Powers</a>
+          <a href="mailto:benny.powers@forter.com">Benny Powers</a>
           <a href="https://github.com/bennypowers"><img class="avatar" src="images/github-logo.svg" alt="Github profile"></a>
           <a href="https://gitlab.com/bennyp"><img class="avatar" src="images/gitlab-logo.svg" alt="Gitlab profile"></a>
         </p>
       </slidem-slide>
     </slidem-deck>
-
-    <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () =>
-        navigator.serviceWorker.register('sw.js'));
-    }
-
-    window.addEventListener('WebComponentsReady', () => {
-      const script = document.createElement('script');
-      script.src = 'https://cdn.rawgit.com/zerodevx/zero-md/v1.0.0/build/zero-md.min.js';
-      script.async = true;
-      script.defer = true;
-      document.head.appendChild(script);
-      const deck = document.getElementById('deck');
-      const forward = () => deck.$.forward.onclick();
-      const backward = () => deck.$.backward.onclick();
-      deck.addEventListener('click', forward);
-      document.body.addEventListener('keyup', (event) =>
-          event.code === 'Space' ? forward()
-        : event.code === 'Delete' ? backward()
-        : event.code === 'Backspace' ? backward()
-        : event.code === 'ArrowLeft' ? backward()
-        : null);
-    });
-    </script>
-
-    <script async type="module" src="main.js"></script>
-    <script async defer nomodule src="main.nomodule.js"></script>
 
   </body>
 </html>

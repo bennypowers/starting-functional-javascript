@@ -1,6 +1,15 @@
-[![Contact me on Codementor](https://cdn.codementor.io/badges/contact_me_github.svg)](https://www.codementor.io/bennyp?utm_source=github&utm_medium=button&utm_term=bennyp&utm_campaign=github)
+# Starting Functional JavaScript
+A short introduction to functional programming in JavaScript
 
-# ecmascript-update
-A Wee Catchup on the Language you Thought you Knew
+Covers
 
-This Presentation runs in your browser. [Watch it on GitHub Pages](https://bennypowers.github.io/ecmascript-update)
+- [x] Pure vs impure functions
+- [ ] Array methods
+- [x] Currying and partial application
+- [x] Function composition
+- [x] Pointfree style
+- [ ] A few Crocks functional helpers
+- [ ] Functor interface
+- [ ] Monoids
+
+This presentation runs in your browser. [Watch it on GitHub Pages](https://bennypowers.github.io/starting-functional-javascript)
