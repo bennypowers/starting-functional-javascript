@@ -103,6 +103,26 @@
         float: right;
       }
 
+      [large] {
+        font-size: 100%;
+      }
+
+      [flex] {
+        display: flex;
+      }
+
+      [column] {
+        flex-direction: column;
+      }
+
+      [center] {
+        align-items: center;
+      }
+
+      [flex] h2 {
+        align-self: flex-start;
+      }
+
       .avatar {
         max-width: 36px;
       }
@@ -147,8 +167,12 @@
         background: rgba(0,0,0,0.5)
       }
 
-      [large] {
-        font-size: 100%;
+      #monad {
+        color: white;
+      }
+
+      #crocks img {
+        width: 80%;
       }
     </style>
 
@@ -206,6 +230,44 @@
         <zero-md large reveal css-urls='["prism-atom-dark.css"]' src="markdown/pure-functions-5.md"></zero-md>
       </slidem-slide>
 
+      <slidem-slide id="composition" fade-in background="--primary">
+        <h2 uppercase>Function Composition</h2>
+        <p explanation floating>Reduces many functions to one by applying each outer function to the application of the inner function.</p>
+        <zero-md large reveal floating css-urls='["prism-atom-dark.css"]' src="markdown/binary-compose.md"></zero-md>
+        <zero-md reveal floating css-urls='["prism-atom-dark.css"]' src="markdown/examples-compose.md"></zero-md>
+      </slidem-slide>
+
+      <slidem-slide id="functors" background="--primary">
+        <h2>Functors</h2>
+        <p>
+          A functor is a container for some value, like an envelope.
+          <span reveal>Functors can map from some value <code>x</code> in a category to another value <code>y</code> in that same category</span>
+          <span reveal><code>Array</code> and <code>Promise</code> are both functors.</span>
+        </p>
+        <zero-md large reveal css-urls='["prism-atom-dark.css"]' src="markdown/functors.md"></zero-md>
+      </slidem-slide>
+
+      <slidem-slide id="monad" background="--secondary">
+        <h2>Monad</h2>
+        <p>
+          Like a functor, Monads can map over their contents.
+          <span reveal>Monads have the added ability to unwrap their self-similar contents.</span>
+          <span reveal>This power is called <code>chain</code>, <code>bind</code>, or <code>flatMap</code></span>
+        </p>
+        <zero-md large reveal css-urls='["prism-atom-dark.css"]' src="markdown/monads-array.md"></zero-md>
+      </slidem-slide>
+
+      <slidem-slide id="maybe-monad" background="--primary">
+        <h2>Maybe Monad</h2>
+        <p explanation floating>
+          The Maybe monad wraps a value which may not exist.
+          <span reveal>It has two instances: <code>Just a</code> and <code>Nothing</code>.</span>
+          <span reveal>Mapping over a <code>Just</code> works as expected.</span>
+          <span reveal>Mapping over a <code>Nothing</code> skips execution.</span>
+        </p>
+        <zero-md reveal css-urls='["prism-atom-dark.css"]' src="markdown/monads-maybe.md"></zero-md>
+      </slidem-slide>
+
       <slidem-slide id="currying-header" slide-in background="./images/curry.jpg">
         <h2 uppercase fit color="--secondary" line-height="1">Currying</h2>
         <p fit color="white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
@@ -224,34 +286,72 @@
         <p color="white">Use closure to defer computation.</p>
         <zero-md large reveal css-urls='["prism-atom-dark.css"]' src="markdown/partial-application-1.md"></zero-md>
         <zero-md large reveal css-urls='["prism-atom-dark.css"]' src="markdown/partial-application-2.md"></zero-md>
-      </slidem-slide>
-
-      <slidem-slide id="crocks" fade-in background="--secondary">
-        <h2 uppercase>Crocks</h2>
-        <p color="white">A Library of Algebric Data Types and Functional Helpers</p>
-        <p color="white" style="margin-bottom: 40px">Crock's helper functions come curried by default</p>
-        <zero-md large reveal floating css-urls='["prism-atom-dark.css"]' src="markdown/crocks-propOr-1.md"></zero-md>
-        <zero-md large reveal floating css-urls='["prism-atom-dark.css"]' src="markdown/crocks-propOr-2.md"></zero-md>
-        <zero-md large reveal floating css-urls='["prism-atom-dark.css"]' src="markdown/crocks-propPathOr.md"></zero-md>
-      </slidem-slide>
-
-      <slidem-slide id="composition" fade-in background="--primary">
-        <h2 uppercase>Function Composition</h2>
-        <p explanation floating>Reduces many functions to one by applying each outer function to the application of the inner function.</p>
-        <zero-md large reveal floating css-urls='["prism-atom-dark.css"]' src="markdown/binary-compose.md"></zero-md>
-        <zero-md reveal floating css-urls='["prism-atom-dark.css"]' src="markdown/crocks-compose.md"></zero-md>
+        <p reveal color="white" style="margin-top:20px;">Partial application has many uses like generic functions, and fluent computations.</p>
       </slidem-slide>
 
       <slidem-slide id="pointfree" fade-in background="--primary">
         <h2 uppercase>Pointfree Style</h2>
-        <p explanation floating>Functions which reference their own data are said to be "pointed". Likewise, functions which do not reference their parameters are said to be "pointfree"</p>
+        <p explanation floating>
+          Functions which reference their own data are said to be "pointed".
+          <span reveal>Likewise, functions which do not reference their parameters are said to be "pointfree".</span>
+          <span reveal>With curried and point-free functions, always take your <em>data</em> as the <em>last</em> parameter.</span>
+        </p>
         <zero-md large reveal floating css-urls='["prism-atom-dark.css"]' src="markdown/pointfree-1.md"></zero-md>
+        <zero-md large reveal floating css-urls='["prism-atom-dark.css"]' src="markdown/pointfree-2.md"></zero-md>
       </slidem-slide>
 
-      <slidem-slide id="pointfree" fade-in background="--primary">
-        <h2 uppercase>Data-Last</h2>
-        <p explanation floating>With curried and point-free functions, always take your data as the last parameter.</p>
-        <zero-md reveal floating css-urls='["prism-atom-dark.css"]' src="markdown/pointfree-2.md"></zero-md>
+      <slidem-slide id="crocks" fade-in background="--secondary">
+        <div flex column center>
+          <h2 uppercase color="--primary">Crocks</h2>
+          <img fit src="./images/crocks.png" alt="https://evilsoft.github.io/crocks"/>
+        </div>
+      </slidem-slide>
+
+      <slidem-slide id="crocks-helpers" fade-in background="--secondary">
+        <h2 uppercase color="--primary">Crocks Helpers</h2>
+        <zero-md large floating css-urls='["prism-atom-dark.css"]' src="markdown/crocks-propOr-1.md"></zero-md>
+        <zero-md large reveal floating css-urls='["prism-atom-dark.css"]' src="markdown/crocks-propOr-2.md"></zero-md>
+        <zero-md large reveal floating css-urls='["prism-atom-dark.css"]' src="markdown/crocks-propPathOr.md"></zero-md>
+      </slidem-slide>
+
+      <slidem-slide id="crocks-logic" fade-in background="--secondary">
+        <h2 uppercase color="--primary">Crocks Logic</h2>
+        <zero-md large floating css-urls='["prism-atom-dark.css"]' src="markdown/crocks-logic.md"></zero-md>
+      </slidem-slide>
+
+      <slidem-slide id="crocks-curry" fade-in background="--secondary">
+        <h2 uppercase color="--primary">Crocks Curry</h2>
+        <p color="white">Crocks' curry is very flexible.</p>
+        <zero-md large reveal floating css-urls='["prism-atom-dark.css"]' src="markdown/crocks-curry.md"></zero-md>
+      </slidem-slide>
+
+      <slidem-slide id="monoids" fade-in background="--primary">
+        <h2 uppercase>Monoids</h2>
+        <p>
+          A monoid is a type which has an 'empty' value, and an operation to combine values.
+          <span reveal>Combining a value with the 'empty' value always produces the same value.</span>
+        </p>
+        <ul>
+          <li reveal>What is the empty value for numbers under addition?</li>
+          <li reveal>Under multiplication?</li>
+        </ul>
+      </slidem-slide>
+
+      <slidem-slide id="monoids-boolean" fade-in background="--primary">
+        <h2>You're already using monoids!</h2>
+        <ul>
+          <li reveal><code>&&</code> forms a monoid with <code>true</code> as empty value</li>
+          <li reveal><code>||</code> forms a monoid with <code>false</code> as empty value</li>
+          <li reveal><code>String#concat</code> forms a monoid with <code>''</code> as empty value.</li>
+          <li reveal><code>Object.assign</code> forms a monoid with <code>{}</code> as empty value</li>
+          <li reveal><code>Array#concat</code> forms a monoid with <code>[]</code> as empty value</li>
+        </ul>
+      </slidem-slide>
+
+      <slidem-slide id="monoids-mreduceMap" fade-in background="--primary">
+        <h2><code>mreduceMap</code></h2>
+        <p explanation floating>Folds an array under under a monoid of your choice, first mapping your monoid constructor over it.</p>
+        <zero-md reveal floating css-urls='["prism-atom-dark.css"]' src="markdown/mreduceMap.md"></zero-md>
       </slidem-slide>
 
       <slidem-slide fade-in center background="white">

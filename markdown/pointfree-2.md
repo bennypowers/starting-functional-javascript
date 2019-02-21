@@ -1,7 +1,5 @@
 ```js
-import filter from 'crocks/pointfree/filter'
-import map from 'crocks/pointfree/map'
-import assign from 'crocks/helpers/assign'
+const handleAsJson = resp => resp.json()
 
 fetch('/users')
   .then(handleAsJson)
