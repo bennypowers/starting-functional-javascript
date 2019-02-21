@@ -23,6 +23,14 @@ workbox.clientsClaim();
  */
 self.__precacheManifest = [
   {
+    "url": "images/crocks.png",
+    "revision": "556df83d5e6c84521e0bf12b4f93d145"
+  },
+  {
+    "url": "images/curry.jpg",
+    "revision": "e8f45e5e51cbefb0ad37877aa9c16c83"
+  },
+  {
     "url": "images/github-logo.svg",
     "revision": "ff66eb8ec531024561b1c1ddab593e2f"
   },
@@ -56,7 +64,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "9c4c3c76b2eb932bce959e8370e3f38a"
+    "revision": "1e1563c903fa281cb33f64fccd3341f7"
   },
   {
     "url": "main.js",
@@ -67,100 +75,92 @@ self.__precacheManifest = [
     "revision": "f9adfa4e91b3bb389bb016ce7ff4ee5b"
   },
   {
-    "url": "markdown/arrow-functions-1.md",
-    "revision": "22399b6ca272ab0d1cc898592b617beb"
+    "url": "markdown/binary-compose.md",
+    "revision": "876c892b17bef374a49ced890dedb8e5"
   },
   {
-    "url": "markdown/arrow-functions-2.md",
-    "revision": "8813804b2df66c5c1f5168b03deeb47f"
+    "url": "markdown/crocks-curry.md",
+    "revision": "60efa1e105dcdde085296328869616a8"
   },
   {
-    "url": "markdown/arrow-functions-this.md",
-    "revision": "1a4cbb170bba1a6bbb836f1e04f6bc46"
+    "url": "markdown/crocks-logic.md",
+    "revision": "f04661b9b1839d9bdb99813fc87e457b"
   },
   {
-    "url": "markdown/async-functions.md",
-    "revision": "b5ff9e1da4fed65ea30a599404876bc4"
+    "url": "markdown/crocks-propOr-1.md",
+    "revision": "f5bd9ca5a3112081e8a0469e45cda1eb"
   },
   {
-    "url": "markdown/block-scope.md",
-    "revision": "2a8f50576621dd20d487c092b43381df"
+    "url": "markdown/crocks-propOr-2.md",
+    "revision": "c827f421f8720d7eeac8dd2a71fec054"
   },
   {
-    "url": "markdown/class-keyword-es5.md",
-    "revision": "a5d0991251aabc5b49944de9939e2871"
+    "url": "markdown/crocks-propPathOr.md",
+    "revision": "e99d626f87c9a9278a2ffba21942a8d7"
   },
   {
-    "url": "markdown/class-keyword-extends.md",
-    "revision": "b6d5be4bf43a2dec095beaa80b1edab0"
+    "url": "markdown/curried-functions-2.md",
+    "revision": "cdef8bd2cb6fc5c6426dc196783d70eb"
   },
   {
-    "url": "markdown/class-keyword.md",
-    "revision": "ca05bb84f38cfd65669112d143a87166"
+    "url": "markdown/curried-functions.md",
+    "revision": "35d6c1c40c3cee280ea98d321589b0a1"
   },
   {
-    "url": "markdown/computed-object-keys-es5.md",
-    "revision": "6bcb1e6658381d2ae4bf30dc4c5279b1"
+    "url": "markdown/examples-compose.md",
+    "revision": "5502fe039baee7f574d1bcbb2dd1dea6"
   },
   {
-    "url": "markdown/computed-object-keys.md",
-    "revision": "01ac556b08aba8cfeaae5196386d6654"
+    "url": "markdown/functors.md",
+    "revision": "cde6cb3ddfd588e78d49bbe61fc6b241"
   },
   {
-    "url": "markdown/concise-object-params.md",
-    "revision": "cb679ab2dec59dd6f1e8b02af56c8967"
+    "url": "markdown/monads-array.md",
+    "revision": "c847591a3aebb7b97f0420b755ed309f"
   },
   {
-    "url": "markdown/concise-object.md",
-    "revision": "55fc7f35106944d6c96245b95b504a73"
+    "url": "markdown/monads-maybe.md",
+    "revision": "c326b0610661202b08062407f10f5e51"
   },
   {
-    "url": "markdown/default-parameters-problem.md",
-    "revision": "0562bb4866ca3d78cb9f46268cd14962"
+    "url": "markdown/mreduceMap.md",
+    "revision": "16f4201f9be7145f5bb4335be878e2ad"
   },
   {
-    "url": "markdown/default-parameters.md",
-    "revision": "25b812e83de25355f93d6775064b7e3d"
+    "url": "markdown/partial-application-1.md",
+    "revision": "a21120957ef4607e8d3e5a7b58e1b907"
   },
   {
-    "url": "markdown/destructuring-alias.md",
-    "revision": "be3c3b66bfe73db41828c224238271de"
+    "url": "markdown/partial-application-2.md",
+    "revision": "26077264b26fcf9899677962c819ae5d"
   },
   {
-    "url": "markdown/destructuring-array.md",
-    "revision": "62001832c828cbbe683a48ee662358f2"
+    "url": "markdown/pointfree-1.md",
+    "revision": "ae3f038645d53b3b5fa0cd4f1a1fd685"
   },
   {
-    "url": "markdown/destructuring-object.md",
-    "revision": "81d677c567a9a2e0fd42c9a29d295482"
+    "url": "markdown/pointfree-2.md",
+    "revision": "8b7ff0af690b280ae895f53f08c6072a"
   },
   {
-    "url": "markdown/destructuring-params.md",
-    "revision": "c4050ce35fbd9e1643560626f86a0452"
+    "url": "markdown/pure-functions-1.md",
+    "revision": "272791d8cbca22403c56ac9f936fa4ad"
   },
   {
-    "url": "markdown/let-const.md",
-    "revision": "294919c85a629c0f8489c2392f4dcb88"
+    "url": "markdown/pure-functions-2.md",
+    "revision": "9d4234abd86c8ed7cf08d5cebdcfa5f4"
   },
   {
-    "url": "markdown/promises.md",
-    "revision": "777b4c8027d9a0a54fd6a1e9738d4e20"
+    "url": "markdown/pure-functions-3.md",
+    "revision": "350b4c8033c802fbc587de6f4bde2149"
   },
   {
-    "url": "markdown/rest-spread-tricks.md",
-    "revision": "2ab303192b46bce843ea5af7c32f0fb4"
+    "url": "markdown/pure-functions-4.md",
+    "revision": "724a3f888e829a43b73f0dceeec7b862"
   },
   {
-    "url": "markdown/rest-spread.md",
-    "revision": "19cb21c46fe0e4a7b072275e153d9edb"
-  },
-  {
-    "url": "markdown/template-literals-es5.md",
-    "revision": "a73893faf7bd97e6e5bff233bebed625"
-  },
-  {
-    "url": "markdown/template-literals.md",
-    "revision": "40e3e12b9866a36dd13edfe8782958fe"
+    "url": "markdown/pure-functions-5.md",
+    "revision": "b95bcf33dd1dd1bb722817a9044c2556"
   },
   {
     "url": "package-lock.json",
@@ -176,7 +176,7 @@ self.__precacheManifest = [
   },
   {
     "url": "README.md",
-    "revision": "653f29b940509a2037b0fee34c7fce0d"
+    "revision": "ebb5223ffd19e83d142ae520b927531b"
   },
   {
     "url": "rollup.config.js",
@@ -184,7 +184,7 @@ self.__precacheManifest = [
   },
   {
     "url": "slide-elements.local.js",
-    "revision": "c89d51250355776a9ab4b4370aebdb84"
+    "revision": "4012ff83c4ecb581355f699c81557947"
   },
   {
     "url": "slide-elements.nomodule.js",
