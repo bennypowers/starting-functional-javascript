@@ -4,10 +4,10 @@ node_js: stable
 script: npm run build
 
 before_deploy:
-    - rm .gitignore
-    - echo 'node_modules' > .gitignore
-    - git add .
-    - git commit -m "add build"
+  - ls
+  - rm .gitignore
+  - echo 'node_modules' > .gitignore
+  - git add .
 
 deploy:
   provider: pages
