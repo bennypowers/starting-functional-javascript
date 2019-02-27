@@ -6,6 +6,8 @@ script: npm run build
 before_deploy:
     - rm .gitignore
     - echo 'node_modules' > .gitignore
+    - git add .
+    - git commit -m "add build"
 
 deploy:
   provider: pages
