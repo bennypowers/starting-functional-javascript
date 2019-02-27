@@ -1,6 +1,10 @@
 language: node_js
 node_js: stable
+
 script: npm run build
+
+before_deploy:
+    - sed -i 'main\*/d' .gitignore
 
 deploy:
   provider: pages
