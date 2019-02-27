@@ -1,10 +1,7 @@
 language: node_js
 node_js: stable
 
-script:
-  - npm run build
-  - git add -f main.js
-  - git add -f main.js.map
+script: npm run build
 
 deploy:
   provider: pages
