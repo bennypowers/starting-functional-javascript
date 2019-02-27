@@ -28,13 +28,7 @@
       });
     </script>
 
-    <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () =>
-        navigator.serviceWorker.register('sw.js'));
-    }
-    </script>
-
+    <script async defer src="https://unpkg.com/@power-elements/service-worker@^3.2.0"></script>
     <script async type="module" src="main.js"></script>
     <script async defer nomodule src="main.nomodule.js"></script>
 
@@ -44,6 +38,10 @@
         --primary: #7ED9D9;
         --secondary: #4362AA;
         --bottom-offset: 106px;
+      }
+
+      service-worker {
+        display: none;
       }
 
       slidem-deck[loading] {
@@ -383,6 +381,8 @@
         </p>
       </slidem-slide>
     </slidem-deck>
+
+    <service-worker id="sw" auto-reload path="./sw.js"></service-worker>
 
   </body>
 </html>

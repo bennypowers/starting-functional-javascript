@@ -64,7 +64,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "1e1563c903fa281cb33f64fccd3341f7"
+    "revision": "b8fb8dc4fbc9971a717d7e7db337dfc0"
   },
   {
     "url": "main.js",
@@ -119,8 +119,12 @@ self.__precacheManifest = [
     "revision": "c847591a3aebb7b97f0420b755ed309f"
   },
   {
+    "url": "markdown/monads-maybe-applicative.md",
+    "revision": "80fb8d53a46aa9d93ea40b6f5abb08f7"
+  },
+  {
     "url": "markdown/monads-maybe.md",
-    "revision": "c326b0610661202b08062407f10f5e51"
+    "revision": "12551f1e46fb68e57b3e0a7abc303f3e"
   },
   {
     "url": "markdown/mreduceMap.md",
@@ -164,11 +168,11 @@ self.__precacheManifest = [
   },
   {
     "url": "package-lock.json",
-    "revision": "5b2f988f9cea4a2b1e2d1ffd6168d3f8"
+    "revision": "1da25165801d39607e45e5ed0a775735"
   },
   {
     "url": "package.json",
-    "revision": "36faad951bd80336e6a8fdcbdec38603"
+    "revision": "919e73282f2f83b0c8347332e049bc37"
   },
   {
     "url": "prism-atom-dark.css",
