@@ -4,7 +4,8 @@ node_js: stable
 script: npm run build
 
 before_deploy:
-    - sed -i 'main\*/d' .gitignore
+    - rm .gitignore
+    - cat 'node_modules' > .gitignore
 
 deploy:
   provider: pages
