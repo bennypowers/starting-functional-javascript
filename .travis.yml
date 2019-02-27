@@ -7,7 +7,7 @@ before_script:
 
 script: npm run build
 
-after_script:
+before_deploy:
   - git add .
 
 deploy:
