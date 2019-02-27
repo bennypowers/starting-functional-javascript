@@ -5,7 +5,7 @@ script: npm run build
 
 before_deploy:
     - rm .gitignore
-    - cat 'node_modules' > .gitignore
+    - echo 'node_modules' > .gitignore
 
 deploy:
   provider: pages
