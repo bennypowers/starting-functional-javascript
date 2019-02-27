@@ -64,7 +64,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "b8fb8dc4fbc9971a717d7e7db337dfc0"
+    "revision": "8f68a761f3f47d28c2ef756b1e2ab812"
   },
   {
     "url": "main.js",
