@@ -1,14 +1,10 @@
 language: node_js
 node_js: stable
 
-before_script:
-  - rm .gitignore
-  - echo 'node_modules' > .gitignore
-
-script: npm run build
-
-before_deploy:
-  - git add .
+script:
+  - npm run build
+  - git add -f main.js
+  - git add -f main.js.map
 
 deploy:
   provider: pages
