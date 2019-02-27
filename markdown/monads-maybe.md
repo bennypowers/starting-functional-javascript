@@ -1,17 +1,17 @@
 ```js
-const safeNumber = x =>
-  typeof x === 'number' ? Maybe.of(x) : Nothing()
+import { Maybe, safe, isNumber } from 'crocks';
 
-// NOTE: IRL, there are better ways to write this. e.g. applicatives
-const safeAdd = (x, y) =>
-  safeNumber(y)
-    .chain(i =>
-      safeNumber(x)
-        .map(add(i)))
+const safeNumber = safe(isNumber)
+
+const safeAdd = (x, y) => {
+  const maybeA = safeNumber(a)
+  const maybeB = safeNumber(b)
+  return maybeA.chain(
+    valA => maybeB.map(valB => valA + valB)
+  )
+}
 
 safeAdd(1, 2)    // Maybe 3
-
 safeAdd(1, null) // Nothing
-
 safeAdd('רק', 'ביבי') // Nothing
 ```
