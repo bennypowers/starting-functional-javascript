@@ -1,12 +1,13 @@
 language: node_js
 node_js: stable
 
-script: npm run build
-
-before_deploy:
-  - ls
+before_script:
   - rm .gitignore
   - echo 'node_modules' > .gitignore
+
+script: npm run build
+
+after_script:
   - git add .
 
 deploy:
