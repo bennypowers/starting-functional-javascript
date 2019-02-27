@@ -1,6 +1,11 @@
 language: node_js
 node_js: stable
+
 script: npm run build
+
+before_deploy:
+    - rm .gitignore
+    - echo 'node_modules' > .gitignore
 
 deploy:
   provider: pages
