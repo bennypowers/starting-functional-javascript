@@ -132,7 +132,7 @@ self.__precacheManifest = [
   },
   {
     "url": "markdown/monads-maybe.md",
-    "revision": "12551f1e46fb68e57b3e0a7abc303f3e"
+    "revision": "613f48638d40c34171d648849608bb9d"
   },
   {
     "url": "markdown/mreduceMap.md",
