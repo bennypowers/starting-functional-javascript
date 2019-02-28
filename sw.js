@@ -64,7 +64,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "0af718021a08ae87dd639e97d9bcd4af"
+    "revision": "1cd43e2c9b7598293c2d86eb38513cc8"
   },
   {
     "url": "main.js",
@@ -73,6 +73,14 @@ self.__precacheManifest = [
   {
     "url": "markdown/binary-compose.md",
     "revision": "876c892b17bef374a49ced890dedb8e5"
+  },
+  {
+    "url": "markdown/class-mixins-1.md",
+    "revision": "28c3636e931e0823cf6b4180acb501a8"
+  },
+  {
+    "url": "markdown/class-mixins-2.md",
+    "revision": "087db2dc038acdd023a8a68f0e26e193"
   },
   {
     "url": "markdown/crocks-curry.md",
@@ -156,7 +164,7 @@ self.__precacheManifest = [
   },
   {
     "url": "markdown/pure-functions-4.md",
-    "revision": "724a3f888e829a43b73f0dceeec7b862"
+    "revision": "1616559fb7a624e1702036e97ddb5069"
   },
   {
     "url": "markdown/pure-functions-5.md",

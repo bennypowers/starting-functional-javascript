@@ -1,7 +1,8 @@
 ```js
-[1]
-  .map(add(1)) // [2]
+const inc = x => x + 1
+
+[1].map(inc) // [2]
 
 Promise.resolve(2)
-  .then(add(1)) // Promise 3
+  .then(inc) // Promise 3
 ```  
