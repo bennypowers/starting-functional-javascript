@@ -56,7 +56,7 @@ self.__precacheManifest = [
   },
   {
     "url": "images/poster.png",
-    "revision": "77da0859599d52265240a606d2615d0e"
+    "revision": "c343be2d6e1636d51972f815dde3ab25"
   },
   {
     "url": "images/red-heifer.jpg",
