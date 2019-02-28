@@ -222,24 +222,37 @@
       </slidem-slide>
 
       <slidem-slide id="pure-functions-about" fade-in darken-background="0.7" background="./images/red-heifer.jpg">
-        <p line-height="2">Pure functions are <em>useless</em></p>
-        <p reveal line-height="2"><em>Easily tested</em></p>
-        <p reveal line-height="2">And <em>Referentially Transparent</em>.</p>
+        <p line-height="2">
+          Pure functions are
+          <span reveal><em>useless,</em></span>
+          <span reveal><em>easily tested</em>,</span>
+          <span reveal>and <em>referentially transparent</em>.</span>
+        </p>
         <zero-md large reveal css-urls='["prism-atom-dark.css"]' src="markdown/pure-functions-5.md"></zero-md>
       </slidem-slide>
 
       <slidem-slide id="composition" fade-in background="--primary">
         <h2 uppercase>Function Composition</h2>
-        <p explanation floating>Reduces many functions to one by applying each outer function to the application of the inner function.</p>
-        <zero-md large reveal floating css-urls='["prism-atom-dark.css"]' src="markdown/binary-compose.md"></zero-md>
-        <zero-md reveal floating css-urls='["prism-atom-dark.css"]' src="markdown/examples-compose.md"></zero-md>
+        <div explanation floating>
+          <p>Reduces many functions to one by applying each outer function to the application of the inner function.</p>
+          <p reveal>In other words, makes one function from two (or more) others.</p>
+        </div>
+        <zero-md large reveal floating css-urls='["prism-atom-dark.css"]' src="markdown/compose-binary.md"></zero-md>
+        <zero-md reveal floating css-urls='["prism-atom-dark.css"]' src="markdown/compose-examples.md"></zero-md>
       </slidem-slide>
 
-      <slidem-slide id="functors" background="--primary">
-        <h2>Functors</h2>
-        <p>
+      <slidem-slide id="composition-class-mixins" fade-in background="--primary">
+        <h2 uppercase>Use Case: Class Mixins</h2>
+        <p explanation floating>JavaScript class mixins are a way to share behaviour among classes</p>
+        <zero-md reveal floating css-urls='["prism-atom-dark.css"]' src="markdown/class-mixins-1.md"></zero-md>
+        <zero-md reveal floating css-urls='["prism-atom-dark.css"]' src="markdown/class-mixins-2.md"></zero-md>
+      </slidem-slide>
+
+      <slidem-slide id="functors" background="--secondary">
+        <h2 color="white">Functors</h2>
+        <p color="white">
           A functor is a container for some value, like an envelope.
-          <span reveal>Functors can map from some value <code>x</code> in a category to another value <code>y</code> in that same category</span>
+          <span reveal>Functors can map from some value <code>x</code> in a category to another value <code>y</code> in that same category.</span>
           <span reveal><code>Array</code> and <code>Promise</code> are both functors.</span>
         </p>
         <zero-md large reveal css-urls='["prism-atom-dark.css"]' src="markdown/functors.md"></zero-md>
@@ -263,7 +276,7 @@
         <p color="white">Use closure to defer computation.</p>
         <zero-md large reveal css-urls='["prism-atom-dark.css"]' src="markdown/partial-application-1.md"></zero-md>
         <zero-md large reveal css-urls='["prism-atom-dark.css"]' src="markdown/partial-application-2.md"></zero-md>
-        <p reveal color="white" style="margin-top:20px;">Partial application has many uses like generic functions, and fluent computations.</p>
+        <p reveal color="white" style="margin-top:30px;">Partial application has many uses e.g. generic functions or fluent computations.</p>
       </slidem-slide>
 
       <slidem-slide id="pointfree" fade-in background="--primary">
@@ -293,7 +306,7 @@
 
       <slidem-slide id="crocks-logic" fade-in background="--secondary">
         <h2 uppercase color="--primary">Crocks Logic</h2>
-        <zero-md large floating css-urls='["prism-atom-dark.css"]' src="markdown/crocks-logic.md"></zero-md>
+        <zero-md floating css-urls='["prism-atom-dark.css"]' src="markdown/crocks-logic.md"></zero-md>
       </slidem-slide>
 
       <slidem-slide id="crocks-curry" fade-in background="--secondary">
@@ -349,11 +362,16 @@
           <span reveal>Mapping over a <code>Just</code> works as expected.</span>
           <span reveal>Mapping over a <code>Nothing</code> skips execution.</span>
         </p>
+        <zero-md reveal css-urls='["prism-atom-dark.css"]' src="markdown/monads-maybe-chain.md"></zero-md>
+      </slidem-slide>
+
+      <slidem-slide id="maybe-monad-chain" background="--primary">
+        <h2>Maybe Monad - Binary</h2>
         <zero-md reveal css-urls='["prism-atom-dark.css"]' src="markdown/monads-maybe.md"></zero-md>
       </slidem-slide>
 
       <slidem-slide id="maybe-monad-applicative" background="--primary">
-        <h2>Maybe Monad</h2>
+        <h2>Maybe Monad - Binary</h2>
         <div explanation floating>
           <p>Wait!! People code like that?</p>
           <br/>
@@ -375,7 +393,7 @@
         <p fit color="--primary" uppercase>Watching!</p>
         <p color="black" uppercase><a href="https://evilSoft.github.io/crocks">Read More</a></p>
         <p style="text-align: right;">
-          <a href="mailto:benny.powers@forter.com">Benny Powers</a>
+          <a href="https://bennypowers.com">Benny Powers</a>
           <a href="https://github.com/bennypowers/starting-functional-javascript"><img class="avatar" src="images/github-logo.svg" alt="Github profile"></a>
           <a href="https://gitlab.com/bennyp"><img class="avatar" src="images/gitlab-logo.svg" alt="Gitlab profile"></a>
         </p>

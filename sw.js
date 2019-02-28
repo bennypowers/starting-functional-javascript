@@ -64,15 +64,27 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "249ddc0438eb3609d81c282f8d690c4f"
+    "revision": "c41d0cf4e75bbc6e4e4a9d2eb63bf8a7"
   },
   {
     "url": "main.js",
     "revision": "10f26ddd2a34ba23227b78df15a42235"
   },
   {
-    "url": "markdown/binary-compose.md",
-    "revision": "876c892b17bef374a49ced890dedb8e5"
+    "url": "markdown/class-mixins-1.md",
+    "revision": "28c3636e931e0823cf6b4180acb501a8"
+  },
+  {
+    "url": "markdown/class-mixins-2.md",
+    "revision": "087db2dc038acdd023a8a68f0e26e193"
+  },
+  {
+    "url": "markdown/compose-binary.md",
+    "revision": "b6b1e4f661d7bf44487a8f0d9f0bc1c6"
+  },
+  {
+    "url": "markdown/compose-examples.md",
+    "revision": "6934efb50318778382e1758c1e97e4b0"
   },
   {
     "url": "markdown/crocks-curry.md",
@@ -80,7 +92,7 @@ self.__precacheManifest = [
   },
   {
     "url": "markdown/crocks-logic.md",
-    "revision": "f04661b9b1839d9bdb99813fc87e457b"
+    "revision": "ce64fc495444af1733ea2dbf0bef0576"
   },
   {
     "url": "markdown/crocks-propOr-1.md",
@@ -103,12 +115,8 @@ self.__precacheManifest = [
     "revision": "35d6c1c40c3cee280ea98d321589b0a1"
   },
   {
-    "url": "markdown/examples-compose.md",
-    "revision": "5502fe039baee7f574d1bcbb2dd1dea6"
-  },
-  {
     "url": "markdown/functors.md",
-    "revision": "cde6cb3ddfd588e78d49bbe61fc6b241"
+    "revision": "637a74d23d6d484b00b06d0a59b7f470"
   },
   {
     "url": "markdown/monads-array.md",
@@ -117,6 +125,10 @@ self.__precacheManifest = [
   {
     "url": "markdown/monads-maybe-applicative.md",
     "revision": "80fb8d53a46aa9d93ea40b6f5abb08f7"
+  },
+  {
+    "url": "markdown/monads-maybe-chain.md",
+    "revision": "9ae6d36e08be2799ed4bbcc08b53f81d"
   },
   {
     "url": "markdown/monads-maybe.md",
@@ -156,7 +168,7 @@ self.__precacheManifest = [
   },
   {
     "url": "markdown/pure-functions-4.md",
-    "revision": "724a3f888e829a43b73f0dceeec7b862"
+    "revision": "1616559fb7a624e1702036e97ddb5069"
   },
   {
     "url": "markdown/pure-functions-5.md",
