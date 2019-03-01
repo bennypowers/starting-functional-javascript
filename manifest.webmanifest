@@ -3,8 +3,8 @@
   "short_name": "ES Update",
   "start_url": ".",
   "display": "standalone",
-  "background_color": "#FF2A69",
-  "theme_color": "#FF2A69",
+  "background_color": "#7ED9D9",
+  "theme_color": "#7ED9D9",
   "description": "A Short Presentation on the new JavaScript.",
   "icons": [{
     "src": "images/js.48x48.png",
