@@ -11,10 +11,11 @@
  * See https://goo.gl/2aRDsh
  */
 
-importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
+importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.2.0/workbox-sw.js");
 
-workbox.skipWaiting();
-workbox.clientsClaim();
+workbox.core.skipWaiting();
+
+workbox.core.clientsClaim();
 
 /**
  * The workboxSW.precacheAndRoute() method efficiently caches and responds to
@@ -64,7 +65,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "749bf593286964bde01988776095466d"
+    "revision": "3d349a66012cef1fea3f06b9def82c65"
   },
   {
     "url": "main.js",
@@ -176,11 +177,11 @@ self.__precacheManifest = [
   },
   {
     "url": "package-lock.json",
-    "revision": "1da25165801d39607e45e5ed0a775735"
+    "revision": "c2316e2a1e169cb3c5c0bd8406cb7e1e"
   },
   {
     "url": "package.json",
-    "revision": "919e73282f2f83b0c8347332e049bc37"
+    "revision": "ba3586018a5dad19eb517ff07c264e71"
   },
   {
     "url": "prism-atom-dark.css",
@@ -207,5 +208,4 @@ self.__precacheManifest = [
     "revision": "317ad1ab998eeea5596d30b8e714cf92"
   }
 ].concat(self.__precacheManifest || []);
-workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});

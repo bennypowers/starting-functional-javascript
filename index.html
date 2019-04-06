@@ -24,7 +24,7 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700">
 
-    <script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2/webcomponents-loader.js" defer></script>
+    <script src="/node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
     <script type="module">
       WebComponents.waitFor(() => {
         let el = document.createElement('script');
@@ -33,7 +33,7 @@
       });
     </script>
 
-    <script async defer src="https://unpkg.com/@power-elements/service-worker@^3.2.0"></script>
+    <script async defer src="https://unpkg.com/@power-elements/service-worker"></script>
     <script async type="module" src="main.js"></script>
     <script async defer nomodule src="main.nomodule.js"></script>
 
@@ -236,33 +236,6 @@
         <zero-md large reveal css-urls='["prism-atom-dark.css"]' src="markdown/pure-functions-5.md"></zero-md>
       </slidem-slide>
 
-      <slidem-slide id="composition" fade-in background="--primary">
-        <h2 uppercase>Function Composition</h2>
-        <div explanation floating>
-          <p>Reduces many functions to one by applying each outer function to the application of the inner function.</p>
-          <p reveal>In other words, makes one function from two (or more) others.</p>
-        </div>
-        <zero-md large reveal floating css-urls='["prism-atom-dark.css"]' src="markdown/compose-binary.md"></zero-md>
-        <zero-md reveal floating css-urls='["prism-atom-dark.css"]' src="markdown/compose-examples.md"></zero-md>
-      </slidem-slide>
-
-      <slidem-slide id="composition-class-mixins" fade-in background="--primary">
-        <h2 uppercase>Use Case: Class Mixins</h2>
-        <p explanation floating>JavaScript class mixins are a way to share behaviour among classes</p>
-        <zero-md reveal floating css-urls='["prism-atom-dark.css"]' src="markdown/class-mixins-1.md"></zero-md>
-        <zero-md reveal floating css-urls='["prism-atom-dark.css"]' src="markdown/class-mixins-2.md"></zero-md>
-      </slidem-slide>
-
-      <slidem-slide id="functors" background="--secondary">
-        <h2 color="white">Functors</h2>
-        <p color="white">
-          A functor is a container for some value, like an envelope.
-          <span reveal>Functors can map from some value <code>x</code> in a category to another value <code>y</code> in that same category.</span>
-          <span reveal><code>Array</code> and <code>Promise</code> are both functors.</span>
-        </p>
-        <zero-md large reveal css-urls='["prism-atom-dark.css"]' src="markdown/functors.md"></zero-md>
-      </slidem-slide>
-
       <slidem-slide id="currying-header" slide-in background="./images/curry.jpg">
         <h2 uppercase fit color="--secondary" line-height="1">Currying</h2>
         <p fit color="white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
@@ -284,6 +257,23 @@
         <p reveal color="white" style="margin-top:30px;">Partial application has many uses e.g. generic functions or fluent computations.</p>
       </slidem-slide>
 
+      <slidem-slide id="composition" fade-in background="--primary">
+        <h2 uppercase>Function Composition</h2>
+        <div explanation floating>
+          <p>Reduces many functions to one by applying each outer function to the application of the inner function.</p>
+          <p reveal>In other words, makes one function from two (or more) others.</p>
+        </div>
+        <zero-md large reveal floating css-urls='["prism-atom-dark.css"]' src="markdown/compose-binary.md"></zero-md>
+        <zero-md reveal floating css-urls='["prism-atom-dark.css"]' src="markdown/compose-examples.md"></zero-md>
+      </slidem-slide>
+
+      <slidem-slide id="composition-class-mixins" fade-in background="--primary">
+        <h2 uppercase>Use Case: Class Mixins</h2>
+        <p explanation floating>JavaScript class mixins are a way to share behaviour among classes</p>
+        <zero-md reveal floating css-urls='["prism-atom-dark.css"]' src="markdown/class-mixins-1.md"></zero-md>
+        <zero-md reveal floating css-urls='["prism-atom-dark.css"]' src="markdown/class-mixins-2.md"></zero-md>
+      </slidem-slide>
+
       <slidem-slide id="pointfree" fade-in background="--primary">
         <h2 uppercase>Pointfree Style</h2>
         <p explanation floating>
@@ -293,6 +283,16 @@
         </p>
         <zero-md large reveal floating css-urls='["prism-atom-dark.css"]' src="markdown/pointfree-1.md"></zero-md>
         <zero-md large reveal floating css-urls='["prism-atom-dark.css"]' src="markdown/pointfree-2.md"></zero-md>
+      </slidem-slide>
+
+      <slidem-slide id="functors" background="--secondary">
+        <h2 color="white">Functors</h2>
+        <p color="white">
+          A functor is a container for some value, like an envelope.
+          <span reveal>Functors can map from some value <code>x</code> in a category to another value <code>y</code> in that same category.</span>
+          <span reveal><code>Array</code> and <code>Promise</code> are both functors.</span>
+        </p>
+        <zero-md large reveal css-urls='["prism-atom-dark.css"]' src="markdown/functors.md"></zero-md>
       </slidem-slide>
 
       <slidem-slide id="crocks" fade-in background="--secondary">
@@ -384,7 +384,7 @@
           <p reveal><strong><em>👉 NOPE 👈</em></strong></span></p>
           <br/>
           <br/>
-          <p reveal>Monads are also applicatives, which means we can lift any function into 'monadic space' with `lift`</p>
+          <p reveal>Monads are also applicatives, which means we can lift any function into 'monadic space' with <code>lift</code></p>
         </div>
         <zero-md reveal css-urls='["prism-atom-dark.css"]' src="markdown/monads-maybe-applicative.md"></zero-md>
       </slidem-slide>
