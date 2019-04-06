@@ -11,10 +11,11 @@
  * See https://goo.gl/2aRDsh
  */
 
-importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
+importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.2.0/workbox-sw.js");
 
-workbox.skipWaiting();
-workbox.clientsClaim();
+workbox.core.skipWaiting();
+
+workbox.core.clientsClaim();
 
 /**
  * The workboxSW.precacheAndRoute() method efficiently caches and responds to
@@ -56,7 +57,7 @@ self.__precacheManifest = [
   },
   {
     "url": "images/poster.png",
-    "revision": "77da0859599d52265240a606d2615d0e"
+    "revision": "c343be2d6e1636d51972f815dde3ab25"
   },
   {
     "url": "images/red-heifer.jpg",
@@ -64,15 +65,11 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "1cd43e2c9b7598293c2d86eb38513cc8"
+    "revision": "f30a7d3b60607d0f615d7f398aadccaa"
   },
   {
     "url": "main.js",
     "revision": "10f26ddd2a34ba23227b78df15a42235"
-  },
-  {
-    "url": "markdown/binary-compose.md",
-    "revision": "876c892b17bef374a49ced890dedb8e5"
   },
   {
     "url": "markdown/class-mixins-1.md",
@@ -83,12 +80,20 @@ self.__precacheManifest = [
     "revision": "087db2dc038acdd023a8a68f0e26e193"
   },
   {
+    "url": "markdown/compose-binary.md",
+    "revision": "b6b1e4f661d7bf44487a8f0d9f0bc1c6"
+  },
+  {
+    "url": "markdown/compose-examples.md",
+    "revision": "6934efb50318778382e1758c1e97e4b0"
+  },
+  {
     "url": "markdown/crocks-curry.md",
     "revision": "60efa1e105dcdde085296328869616a8"
   },
   {
     "url": "markdown/crocks-logic.md",
-    "revision": "f04661b9b1839d9bdb99813fc87e457b"
+    "revision": "ce64fc495444af1733ea2dbf0bef0576"
   },
   {
     "url": "markdown/crocks-propOr-1.md",
@@ -111,12 +116,8 @@ self.__precacheManifest = [
     "revision": "35d6c1c40c3cee280ea98d321589b0a1"
   },
   {
-    "url": "markdown/examples-compose.md",
-    "revision": "5502fe039baee7f574d1bcbb2dd1dea6"
-  },
-  {
     "url": "markdown/functors.md",
-    "revision": "cde6cb3ddfd588e78d49bbe61fc6b241"
+    "revision": "637a74d23d6d484b00b06d0a59b7f470"
   },
   {
     "url": "markdown/monads-array.md",
@@ -127,8 +128,12 @@ self.__precacheManifest = [
     "revision": "80fb8d53a46aa9d93ea40b6f5abb08f7"
   },
   {
+    "url": "markdown/monads-maybe-chain.md",
+    "revision": "9ae6d36e08be2799ed4bbcc08b53f81d"
+  },
+  {
     "url": "markdown/monads-maybe.md",
-    "revision": "12551f1e46fb68e57b3e0a7abc303f3e"
+    "revision": "613f48638d40c34171d648849608bb9d"
   },
   {
     "url": "markdown/mreduceMap.md",
@@ -172,11 +177,11 @@ self.__precacheManifest = [
   },
   {
     "url": "package-lock.json",
-    "revision": "1da25165801d39607e45e5ed0a775735"
+    "revision": "c2316e2a1e169cb3c5c0bd8406cb7e1e"
   },
   {
     "url": "package.json",
-    "revision": "919e73282f2f83b0c8347332e049bc37"
+    "revision": "ba3586018a5dad19eb517ff07c264e71"
   },
   {
     "url": "prism-atom-dark.css",
@@ -203,5 +208,4 @@ self.__precacheManifest = [
     "revision": "317ad1ab998eeea5596d30b8e714cf92"
   }
 ].concat(self.__precacheManifest || []);
-workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
