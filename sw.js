@@ -129,7 +129,7 @@ self.__precacheManifest = [
   },
   {
     "url": "markdown/monads-maybe-chain.md",
-    "revision": "9ae6d36e08be2799ed4bbcc08b53f81d"
+    "revision": "958d0b8fd9f8af792953467104180264"
   },
   {
     "url": "markdown/monads-maybe.md",
