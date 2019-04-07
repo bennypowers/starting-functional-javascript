@@ -7,7 +7,7 @@ const gt10 = x => x > 10;
 
 const safeNumber = safe(isNumber)
 
-const maybeBig = safe(x => x > 10)
+const maybeBig = safe(gt10)
 
 const bigNumber = compose(
   chain(maybeBig),
