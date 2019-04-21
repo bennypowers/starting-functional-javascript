@@ -65,11 +65,11 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "2be342156737f8e43c69fdd3e1defc6d"
+    "revision": "b7c0e44712f4ae6f58b446a68b790fea"
   },
   {
     "url": "main.js",
-    "revision": "10f26ddd2a34ba23227b78df15a42235"
+    "revision": "057908d716e885d306c6142effe8be21"
   },
   {
     "url": "markdown/class-mixins-1.md",
@@ -177,11 +177,11 @@ self.__precacheManifest = [
   },
   {
     "url": "package-lock.json",
-    "revision": "c2316e2a1e169cb3c5c0bd8406cb7e1e"
+    "revision": "993af94c8c67404ed5f7c832a785f692"
   },
   {
     "url": "package.json",
-    "revision": "ba3586018a5dad19eb517ff07c264e71"
+    "revision": "455759bbd446d4bd74dfdbe74b3326bd"
   },
   {
     "url": "prism-atom-dark.css",
@@ -197,7 +197,7 @@ self.__precacheManifest = [
   },
   {
     "url": "slide-elements.local.js",
-    "revision": "4012ff83c4ecb581355f699c81557947"
+    "revision": "fb1a28a8317d3688e4c6319c5bc06d2f"
   },
   {
     "url": "slide-elements.nomodule.js",

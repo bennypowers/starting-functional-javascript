@@ -24,15 +24,15 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700">
 
-    <script src="https://unpkg.com/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
-    <script type="module">
-      WebComponents.waitFor(() => {
-        let el = document.createElement('script');
-        el.src = 'https://cdn.jsdelivr.net/gh/zerodevx/zero-md@1/build/zero-md.min.js';
-        document.head.appendChild(el);
-      });
+    <script>
+      window.ZeroMd = {
+        config: {
+          cssUrls: [ "prism-atom-dark.css" ]
+        }
+      };
     </script>
 
+    <script src="https://unpkg.com/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
     <script async defer src="https://unpkg.com/@power-elements/service-worker"></script>
     <script async type="module" src="main.js"></script>
     <script async defer nomodule src="main.nomodule.js"></script>
@@ -66,8 +66,6 @@
       }
 
       zero-md {
-        display: block;
-        position: relative;
         background: #1d1f21;
         padding: 0 1em;
         font-size: 32px;
@@ -221,10 +219,10 @@
 
       <slidem-slide id="pure-functions" fade-in darken-background="0.7" background="./images/red-heifer.jpg">
         <p>Functions that have no <em>side effects</em> are said to be pure.</p>
-        <zero-md reveal css-urls='["prism-atom-dark.css"]' src="markdown/pure-functions-1.md"></zero-md>
-        <zero-md reveal css-urls='["prism-atom-dark.css"]' src="markdown/pure-functions-2.md"></zero-md>
-        <zero-md reveal css-urls='["prism-atom-dark.css"]' src="markdown/pure-functions-3.md"></zero-md>
-        <zero-md reveal css-urls='["prism-atom-dark.css"]' src="markdown/pure-functions-4.md"></zero-md>
+        <zero-md reveal src="markdown/pure-functions-1.md"></zero-md>
+        <zero-md reveal src="markdown/pure-functions-2.md"></zero-md>
+        <zero-md reveal src="markdown/pure-functions-3.md"></zero-md>
+        <zero-md reveal src="markdown/pure-functions-4.md"></zero-md>
       </slidem-slide>
 
       <slidem-slide id="pure-functions-about" fade-in darken-background="0.7" background="./images/red-heifer.jpg">
@@ -234,7 +232,7 @@
           <span reveal><em>easily tested</em>,</span>
           <span reveal>and <em>referentially transparent</em>.</span>
         </p>
-        <zero-md large reveal css-urls='["prism-atom-dark.css"]' src="markdown/pure-functions-5.md"></zero-md>
+        <zero-md large reveal src="markdown/pure-functions-5.md"></zero-md>
       </slidem-slide>
 
       <slidem-slide id="currying-header" slide-in background="./images/curry.jpg">
@@ -246,15 +244,15 @@
       <slidem-slide id="curried-functions" fade-in background="./images/curry.jpg" darken-background="0.5">
         <h2 uppercase color="--primary">Curried Functions</h2>
         <p color="white">Take their arguments one at a time.</p>
-        <zero-md large reveal css-urls='["prism-atom-dark.css"]' src="markdown/curried-functions.md"></zero-md>
-        <zero-md large reveal css-urls='["prism-atom-dark.css"]' src="markdown/curried-functions-2.md"></zero-md>
+        <zero-md large reveal src="markdown/curried-functions.md"></zero-md>
+        <zero-md large reveal src="markdown/curried-functions-2.md"></zero-md>
       </slidem-slide>
 
       <slidem-slide id="partial-application" fade-in background="./images/curry.jpg" darken-background="0.5">
         <h2 uppercase color="--primary">Partial Application</h2>
         <p color="white">Use closure to defer computation.</p>
-        <zero-md large reveal css-urls='["prism-atom-dark.css"]' src="markdown/partial-application-1.md"></zero-md>
-        <zero-md large reveal css-urls='["prism-atom-dark.css"]' src="markdown/partial-application-2.md"></zero-md>
+        <zero-md large reveal src="markdown/partial-application-1.md"></zero-md>
+        <zero-md large reveal src="markdown/partial-application-2.md"></zero-md>
         <p reveal color="white" style="margin-top:30px;">Partial application has many uses e.g. generic functions or fluent computations.</p>
       </slidem-slide>
 
@@ -264,15 +262,15 @@
           <p>Reduces many functions to one by applying each outer function to the application of the inner function.</p>
           <p reveal>In other words, makes one function from two (or more) others.</p>
         </div>
-        <zero-md large reveal floating css-urls='["prism-atom-dark.css"]' src="markdown/compose-binary.md"></zero-md>
-        <zero-md reveal floating css-urls='["prism-atom-dark.css"]' src="markdown/compose-examples.md"></zero-md>
+        <zero-md large reveal floating src="markdown/compose-binary.md"></zero-md>
+        <zero-md reveal floating src="markdown/compose-examples.md"></zero-md>
       </slidem-slide>
 
       <slidem-slide id="composition-class-mixins" fade-in background="--primary">
         <h2 uppercase>Use Case: Class Mixins</h2>
         <p explanation floating>JavaScript class mixins are a way to share behaviour among classes</p>
-        <zero-md reveal floating css-urls='["prism-atom-dark.css"]' src="markdown/class-mixins-1.md"></zero-md>
-        <zero-md reveal floating css-urls='["prism-atom-dark.css"]' src="markdown/class-mixins-2.md"></zero-md>
+        <zero-md reveal floating src="markdown/class-mixins-1.md"></zero-md>
+        <zero-md reveal floating src="markdown/class-mixins-2.md"></zero-md>
       </slidem-slide>
 
       <slidem-slide id="pointfree" fade-in background="--primary">
@@ -282,8 +280,8 @@
           <span reveal>Likewise, functions which do not reference their parameters are said to be "pointfree".</span>
           <span reveal>With curried and point-free functions, always take your <em>data</em> as the <em>last</em> parameter.</span>
         </p>
-        <zero-md large reveal floating css-urls='["prism-atom-dark.css"]' src="markdown/pointfree-1.md"></zero-md>
-        <zero-md large reveal floating css-urls='["prism-atom-dark.css"]' src="markdown/pointfree-2.md"></zero-md>
+        <zero-md large reveal floating src="markdown/pointfree-1.md"></zero-md>
+        <zero-md large reveal floating src="markdown/pointfree-2.md"></zero-md>
       </slidem-slide>
 
       <slidem-slide id="functors" background="--secondary">
@@ -293,7 +291,7 @@
           <span reveal>Functors can map from some value <code>x</code> in a category to another value <code>y</code> in that same category.</span>
           <span reveal><code>Array</code> and <code>Promise</code> are both functors.</span>
         </p>
-        <zero-md large reveal css-urls='["prism-atom-dark.css"]' src="markdown/functors.md"></zero-md>
+        <zero-md large reveal src="markdown/functors.md"></zero-md>
       </slidem-slide>
 
       <slidem-slide id="crocks" fade-in background="--secondary">
@@ -305,20 +303,20 @@
 
       <slidem-slide id="crocks-helpers" fade-in background="--secondary">
         <h2 uppercase color="--primary">Crocks Helpers</h2>
-        <zero-md large floating css-urls='["prism-atom-dark.css"]' src="markdown/crocks-propOr-1.md"></zero-md>
-        <zero-md large reveal floating css-urls='["prism-atom-dark.css"]' src="markdown/crocks-propOr-2.md"></zero-md>
-        <zero-md large reveal floating css-urls='["prism-atom-dark.css"]' src="markdown/crocks-propPathOr.md"></zero-md>
+        <zero-md large floating src="markdown/crocks-propOr-1.md"></zero-md>
+        <zero-md large reveal floating src="markdown/crocks-propOr-2.md"></zero-md>
+        <zero-md large reveal floating src="markdown/crocks-propPathOr.md"></zero-md>
       </slidem-slide>
 
       <slidem-slide id="crocks-logic" fade-in background="--secondary">
         <h2 uppercase color="--primary">Crocks Logic</h2>
-        <zero-md floating css-urls='["prism-atom-dark.css"]' src="markdown/crocks-logic.md"></zero-md>
+        <zero-md floating src="markdown/crocks-logic.md"></zero-md>
       </slidem-slide>
 
       <slidem-slide id="crocks-curry" fade-in background="--secondary">
         <h2 uppercase color="--primary">Crocks Curry</h2>
         <p color="white">Crocks' curry is very flexible.</p>
-        <zero-md large reveal floating css-urls='["prism-atom-dark.css"]' src="markdown/crocks-curry.md"></zero-md>
+        <zero-md large reveal floating src="markdown/crocks-curry.md"></zero-md>
       </slidem-slide>
 
       <slidem-slide id="monoids" fade-in background="--primary">
@@ -347,7 +345,7 @@
       <slidem-slide id="monoids-mreduceMap" fade-in background="--primary">
         <h2><code>mreduceMap</code></h2>
         <p explanation floating>Folds an array under a monoid of your choice, first mapping your monoid constructor over it.</p>
-        <zero-md reveal floating css-urls='["prism-atom-dark.css"]' src="markdown/mreduceMap.md"></zero-md>
+        <zero-md reveal floating src="markdown/mreduceMap.md"></zero-md>
       </slidem-slide>
 
       <slidem-slide id="monad" background="--secondary">
@@ -357,7 +355,7 @@
           <span reveal>Monads have the added ability to unwrap their self-similar contents.</span>
           <span reveal>This power is called <code>chain</code>, <code>bind</code>, or <code>flatMap</code></span>
         </p>
-        <zero-md large reveal css-urls='["prism-atom-dark.css"]' src="markdown/monads-array.md"></zero-md>
+        <zero-md large reveal src="markdown/monads-array.md"></zero-md>
       </slidem-slide>
 
       <slidem-slide id="maybe-monad" background="--primary">
@@ -368,12 +366,12 @@
           <span reveal>Mapping over a <code>Just</code> works as expected.</span>
           <span reveal>Mapping over a <code>Nothing</code> skips execution.</span>
         </p>
-        <zero-md reveal css-urls='["prism-atom-dark.css"]' src="markdown/monads-maybe-chain.md"></zero-md>
+        <zero-md reveal src="markdown/monads-maybe-chain.md"></zero-md>
       </slidem-slide>
 
       <slidem-slide id="maybe-monad-chain" background="--primary">
         <h2>Maybe Monad - Binary</h2>
-        <zero-md reveal css-urls='["prism-atom-dark.css"]' src="markdown/monads-maybe.md"></zero-md>
+        <zero-md reveal src="markdown/monads-maybe.md"></zero-md>
       </slidem-slide>
 
       <slidem-slide id="maybe-monad-applicative" background="--primary">
@@ -386,7 +384,7 @@
           <br/>
           <p reveal>Monads are also applicatives, which means we can lift any function into 'monadic space' with <code>lift</code></p>
         </div>
-        <zero-md reveal css-urls='["prism-atom-dark.css"]' src="markdown/monads-maybe-applicative.md"></zero-md>
+        <zero-md reveal src="markdown/monads-maybe-applicative.md"></zero-md>
       </slidem-slide>
 
       <slidem-slide fade-in center background="white">
